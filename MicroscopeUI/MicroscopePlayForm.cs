@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace MicroscopeUI
 {
-    public partial class MicroscopeStartupForm : Form
+    public partial class MicroscopePlayForm : Form
     {
-        public MicroscopeStartupForm()
+        public MicroscopePlayForm()
         {
             InitializeComponent();
         }

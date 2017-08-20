@@ -29,31 +29,85 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MicroscopeGameForm));
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.Panel = new System.Windows.Forms.Panel();
+            this.SettingsLabel = new System.Windows.Forms.Label();
+            this.ExportLabel = new System.Windows.Forms.Label();
+            this.PlayLabel = new System.Windows.Forms.Label();
+            this.PlayerLabel = new System.Windows.Forms.Label();
+            this.GameMenuLabel = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.GameMenuPanel = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.panel1.SuspendLayout();
+            this.Overview = new System.Windows.Forms.Label();
+            this.SaveLabel = new System.Windows.Forms.Label();
+            this.Panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.GameMenuPanel.SuspendLayout();
             this.SuspendLayout();
             // 
-            // panel1
+            // Panel
             // 
-            this.panel1.BackColor = System.Drawing.Color.Black;
-            this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(200, 758);
-            this.panel1.TabIndex = 0;
+            this.Panel.BackColor = System.Drawing.Color.Black;
+            this.Panel.Controls.Add(this.SettingsLabel);
+            this.Panel.Controls.Add(this.ExportLabel);
+            this.Panel.Controls.Add(this.Overview);
+            this.Panel.Controls.Add(this.SaveLabel);
+            this.Panel.Controls.Add(this.PlayLabel);
+            this.Panel.Controls.Add(this.PlayerLabel);
+            this.Panel.Controls.Add(this.GameMenuLabel);
+            this.Panel.Controls.Add(this.pictureBox1);
+            this.Panel.Dock = System.Windows.Forms.DockStyle.Left;
+            this.Panel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.Panel.Location = new System.Drawing.Point(0, 0);
+            this.Panel.Name = "Panel";
+            this.Panel.Size = new System.Drawing.Size(200, 564);
+            this.Panel.TabIndex = 0;
+            // 
+            // SettingsLabel
+            // 
+            this.SettingsLabel.AutoSize = true;
+            this.SettingsLabel.Location = new System.Drawing.Point(56, 525);
+            this.SettingsLabel.Name = "SettingsLabel";
+            this.SettingsLabel.Size = new System.Drawing.Size(87, 30);
+            this.SettingsLabel.TabIndex = 5;
+            this.SettingsLabel.Text = "Settings";
+            // 
+            // ExportLabel
+            // 
+            this.ExportLabel.AutoSize = true;
+            this.ExportLabel.Location = new System.Drawing.Point(38, 486);
+            this.ExportLabel.Name = "ExportLabel";
+            this.ExportLabel.Size = new System.Drawing.Size(122, 30);
+            this.ExportLabel.TabIndex = 4;
+            this.ExportLabel.Text = "Export View";
+            // 
+            // PlayLabel
+            // 
+            this.PlayLabel.AutoSize = true;
+            this.PlayLabel.Location = new System.Drawing.Point(74, 378);
+            this.PlayLabel.Name = "PlayLabel";
+            this.PlayLabel.Size = new System.Drawing.Size(51, 30);
+            this.PlayLabel.TabIndex = 3;
+            this.PlayLabel.Text = "Play";
+            // 
+            // PlayerLabel
+            // 
+            this.PlayerLabel.AutoSize = true;
+            this.PlayerLabel.Location = new System.Drawing.Point(60, 326);
+            this.PlayerLabel.Name = "PlayerLabel";
+            this.PlayerLabel.Size = new System.Drawing.Size(78, 30);
+            this.PlayerLabel.TabIndex = 2;
+            this.PlayerLabel.Text = "Players";
+            this.PlayerLabel.Click += new System.EventHandler(this.PlayerLabel_Click);
+            // 
+            // GameMenuLabel
+            // 
+            this.GameMenuLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.GameMenuLabel.AutoSize = true;
+            this.GameMenuLabel.BackColor = System.Drawing.Color.Black;
+            this.GameMenuLabel.Location = new System.Drawing.Point(36, 239);
+            this.GameMenuLabel.Name = "GameMenuLabel";
+            this.GameMenuLabel.Size = new System.Drawing.Size(127, 30);
+            this.GameMenuLabel.TabIndex = 1;
+            this.GameMenuLabel.Text = "Game Menu";
+            this.GameMenuLabel.Click += new System.EventHandler(this.GameMenuLabel_Click);
             // 
             // pictureBox1
             // 
@@ -65,79 +119,53 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // GameMenuPanel
+            // Overview
             // 
-            this.GameMenuPanel.Controls.Add(this.textBox1);
-            this.GameMenuPanel.Location = new System.Drawing.Point(204, 0);
-            this.GameMenuPanel.Name = "GameMenuPanel";
-            this.GameMenuPanel.Size = new System.Drawing.Size(808, 758);
-            this.GameMenuPanel.TabIndex = 1;
-            this.GameMenuPanel.Visible = false;
+            this.Overview.AutoSize = true;
+            this.Overview.Location = new System.Drawing.Point(50, 277);
+            this.Overview.Name = "Overview";
+            this.Overview.Size = new System.Drawing.Size(98, 30);
+            this.Overview.TabIndex = 3;
+            this.Overview.Text = "Overview";
+            this.Overview.Click += new System.EventHandler(this.Overview_Click);
             // 
-            // label1
+            // SaveLabel
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(36, 230);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(127, 30);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Game Menu";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(60, 281);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(78, 30);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Players";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(74, 333);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(51, 30);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "Play";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(3, 3);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(802, 35);
-            this.textBox1.TabIndex = 0;
+            this.SaveLabel.AutoSize = true;
+            this.SaveLabel.Location = new System.Drawing.Point(46, 428);
+            this.SaveLabel.Name = "SaveLabel";
+            this.SaveLabel.Size = new System.Drawing.Size(106, 30);
+            this.SaveLabel.TabIndex = 3;
+            this.SaveLabel.Text = "Save Data";
             // 
             // MicroscopeGameForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 30F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1013, 758);
-            this.Controls.Add(this.GameMenuPanel);
-            this.Controls.Add(this.panel1);
+            this.ClientSize = new System.Drawing.Size(199, 564);
+            this.Controls.Add(this.Panel);
             this.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
             this.Name = "MicroscopeGameForm";
             this.Text = "Microscope Game";
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.Panel.ResumeLayout(false);
+            this.Panel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.GameMenuPanel.ResumeLayout(false);
-            this.GameMenuPanel.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel Panel;
+        private System.Windows.Forms.Label PlayLabel;
+        private System.Windows.Forms.Label PlayerLabel;
+        private System.Windows.Forms.Label GameMenuLabel;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Panel GameMenuPanel;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label SettingsLabel;
+        private System.Windows.Forms.Label ExportLabel;
+        private System.Windows.Forms.Label Overview;
+        private System.Windows.Forms.Label SaveLabel;
     }
 }

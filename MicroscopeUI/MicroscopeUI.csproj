@@ -45,25 +45,52 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="MicroscopeGameMenuForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MicroscopeGameMenuForm.Designer.cs">
+      <DependentUpon>MicroscopeGameMenuForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MicroscopePlayersForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MicroscopePlayersForm.Designer.cs">
+      <DependentUpon>MicroscopePlayersForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="MicroscopeGameForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="MicroscopeGameForm.Designer.cs">
       <DependentUpon>MicroscopeGameForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="MicroscopeStartupForm.cs">
+    <Compile Include="MicroscopeOverviewForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MicroscopeStartupForm.Designer.cs">
-      <DependentUpon>MicroscopeStartupForm.cs</DependentUpon>
+    <Compile Include="MicroscopeOverviewForm.Designer.cs">
+      <DependentUpon>MicroscopeOverviewForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MicroscopePlayForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MicroscopePlayForm.Designer.cs">
+      <DependentUpon>MicroscopePlayForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="MicroscopeGameMenuForm.resx">
+      <DependentUpon>MicroscopeGameMenuForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MicroscopeGameForm.resx">
       <DependentUpon>MicroscopeGameForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MicroscopeStartupForm.resx">
-      <DependentUpon>MicroscopeStartupForm.cs</DependentUpon>
+    <EmbeddedResource Include="MicroscopePlayersForm.resx">
+      <DependentUpon>MicroscopePlayersForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MicroscopeOverviewForm.resx">
+      <DependentUpon>MicroscopeOverviewForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MicroscopePlayForm.resx">
+      <DependentUpon>MicroscopePlayForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
