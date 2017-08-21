@@ -47,7 +47,11 @@
             this.button4 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
+            this.EventInfoTextbox = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.PeriodInfoBox.SuspendLayout();
+            this.SceneInfoBox.SuspendLayout();
+            this.EventInfoBox.SuspendLayout();
             this.SuspendLayout();
             // 
             // GameTreeView
@@ -92,7 +96,7 @@
             // 
             // PeriodDescriptionTextbox
             // 
-            this.PeriodDescriptionTextbox.Location = new System.Drawing.Point(35, 32);
+            this.PeriodDescriptionTextbox.Location = new System.Drawing.Point(35, 24);
             this.PeriodDescriptionTextbox.Multiline = true;
             this.PeriodDescriptionTextbox.Name = "PeriodDescriptionTextbox";
             this.PeriodDescriptionTextbox.Size = new System.Drawing.Size(300, 63);
@@ -111,6 +115,7 @@
             // 
             // SceneInfoBox
             // 
+            this.SceneInfoBox.Controls.Add(this.textBox1);
             this.SceneInfoBox.Location = new System.Drawing.Point(344, 367);
             this.SceneInfoBox.Name = "SceneInfoBox";
             this.SceneInfoBox.Size = new System.Drawing.Size(359, 283);
@@ -120,6 +125,7 @@
             // 
             // EventInfoBox
             // 
+            this.EventInfoBox.Controls.Add(this.EventInfoTextbox);
             this.EventInfoBox.Location = new System.Drawing.Point(709, 78);
             this.EventInfoBox.Name = "EventInfoBox";
             this.EventInfoBox.Size = new System.Drawing.Size(359, 283);
@@ -226,6 +232,22 @@
             this.button5.Text = "<Unused>";
             this.button5.UseVisualStyleBackColor = true;
             // 
+            // EventInfoTextbox
+            // 
+            this.EventInfoTextbox.Location = new System.Drawing.Point(29, 24);
+            this.EventInfoTextbox.Multiline = true;
+            this.EventInfoTextbox.Name = "EventInfoTextbox";
+            this.EventInfoTextbox.Size = new System.Drawing.Size(300, 63);
+            this.EventInfoTextbox.TabIndex = 2;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(35, 24);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(300, 63);
+            this.textBox1.TabIndex = 2;
+            // 
             // MicroscopePlayForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
@@ -253,6 +275,10 @@
             this.Text = "MicroscopePlayForm";
             this.PeriodInfoBox.ResumeLayout(false);
             this.PeriodInfoBox.PerformLayout();
+            this.SceneInfoBox.ResumeLayout(false);
+            this.SceneInfoBox.PerformLayout();
+            this.EventInfoBox.ResumeLayout(false);
+            this.EventInfoBox.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -278,5 +304,7 @@
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox EventInfoTextbox;
     }
 }

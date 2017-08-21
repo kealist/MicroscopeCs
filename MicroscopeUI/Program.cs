@@ -17,7 +17,7 @@ namespace MicroscopeUI
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MicroscopeGameForm());
+            Application.Run(new MicroscopeMainForm());
         }
     }
 }

@@ -49,17 +49,17 @@
             this.OverviewLabel.Location = new System.Drawing.Point(8, 7);
             this.OverviewLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.OverviewLabel.Name = "OverviewLabel";
-            this.OverviewLabel.Size = new System.Drawing.Size(64, 17);
+            this.OverviewLabel.Size = new System.Drawing.Size(72, 17);
             this.OverviewLabel.TabIndex = 0;
-            this.OverviewLabel.Text = "Overview:";
+            this.OverviewLabel.Text = "Big Picture:";
             // 
             // GameDescriptionTextbox
             // 
-            this.GameDescriptionTextbox.Location = new System.Drawing.Point(71, 5);
+            this.GameDescriptionTextbox.Location = new System.Drawing.Point(84, 5);
             this.GameDescriptionTextbox.Margin = new System.Windows.Forms.Padding(2);
             this.GameDescriptionTextbox.Multiline = true;
             this.GameDescriptionTextbox.Name = "GameDescriptionTextbox";
-            this.GameDescriptionTextbox.Size = new System.Drawing.Size(543, 89);
+            this.GameDescriptionTextbox.Size = new System.Drawing.Size(530, 89);
             this.GameDescriptionTextbox.TabIndex = 1;
             // 
             // YesLabel

@@ -51,6 +51,12 @@
     <Compile Include="MicroscopeGameMenuForm.Designer.cs">
       <DependentUpon>MicroscopeGameMenuForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="MicroscopeMainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MicroscopeMainForm.Designer.cs">
+      <DependentUpon>MicroscopeMainForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="MicroscopePlayersForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -82,6 +88,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MicroscopeGameForm.resx">
       <DependentUpon>MicroscopeGameForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MicroscopeMainForm.resx">
+      <DependentUpon>MicroscopeMainForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MicroscopePlayersForm.resx">
       <DependentUpon>MicroscopePlayersForm.cs</DependentUpon>

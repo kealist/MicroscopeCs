@@ -32,12 +32,12 @@
             this.Panel = new System.Windows.Forms.Panel();
             this.SettingsLabel = new System.Windows.Forms.Label();
             this.ExportLabel = new System.Windows.Forms.Label();
+            this.Overview = new System.Windows.Forms.Label();
+            this.SaveLabel = new System.Windows.Forms.Label();
             this.PlayLabel = new System.Windows.Forms.Label();
             this.PlayerLabel = new System.Windows.Forms.Label();
             this.GameMenuLabel = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.Overview = new System.Windows.Forms.Label();
-            this.SaveLabel = new System.Windows.Forms.Label();
             this.Panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -78,6 +78,25 @@
             this.ExportLabel.TabIndex = 4;
             this.ExportLabel.Text = "Export View";
             // 
+            // Overview
+            // 
+            this.Overview.AutoSize = true;
+            this.Overview.Location = new System.Drawing.Point(50, 277);
+            this.Overview.Name = "Overview";
+            this.Overview.Size = new System.Drawing.Size(98, 30);
+            this.Overview.TabIndex = 3;
+            this.Overview.Text = "Overview";
+            this.Overview.Click += new System.EventHandler(this.Overview_Click);
+            // 
+            // SaveLabel
+            // 
+            this.SaveLabel.AutoSize = true;
+            this.SaveLabel.Location = new System.Drawing.Point(46, 428);
+            this.SaveLabel.Name = "SaveLabel";
+            this.SaveLabel.Size = new System.Drawing.Size(106, 30);
+            this.SaveLabel.TabIndex = 3;
+            this.SaveLabel.Text = "Save Data";
+            // 
             // PlayLabel
             // 
             this.PlayLabel.AutoSize = true;
@@ -86,6 +105,7 @@
             this.PlayLabel.Size = new System.Drawing.Size(51, 30);
             this.PlayLabel.TabIndex = 3;
             this.PlayLabel.Text = "Play";
+            this.PlayLabel.Click += new System.EventHandler(this.PlayLabel_Click);
             // 
             // PlayerLabel
             // 
@@ -118,25 +138,6 @@
             this.pictureBox1.Size = new System.Drawing.Size(196, 216);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
-            // 
-            // Overview
-            // 
-            this.Overview.AutoSize = true;
-            this.Overview.Location = new System.Drawing.Point(50, 277);
-            this.Overview.Name = "Overview";
-            this.Overview.Size = new System.Drawing.Size(98, 30);
-            this.Overview.TabIndex = 3;
-            this.Overview.Text = "Overview";
-            this.Overview.Click += new System.EventHandler(this.Overview_Click);
-            // 
-            // SaveLabel
-            // 
-            this.SaveLabel.AutoSize = true;
-            this.SaveLabel.Location = new System.Drawing.Point(46, 428);
-            this.SaveLabel.Name = "SaveLabel";
-            this.SaveLabel.Size = new System.Drawing.Size(106, 30);
-            this.SaveLabel.TabIndex = 3;
-            this.SaveLabel.Text = "Save Data";
             // 
             // MicroscopeGameForm
             // 

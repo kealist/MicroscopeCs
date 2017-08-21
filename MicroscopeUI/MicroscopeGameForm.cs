@@ -12,6 +12,11 @@ namespace MicroscopeUI
 {
     public partial class MicroscopeGameForm : Form
     {
+        MicroscopeGameMenuForm menuWindow = new MicroscopeGameMenuForm();
+        MicroscopePlayersForm playersWindow = new MicroscopePlayersForm();
+        MicroscopeOverviewForm gameWindow = new MicroscopeOverviewForm();
+        MicroscopePlayForm playWindow = new MicroscopePlayForm();
+
         public MicroscopeGameForm()
         {
             InitializeComponent();
@@ -19,20 +24,25 @@ namespace MicroscopeUI
 
         private void GameMenuLabel_Click(object sender, EventArgs e)
         {
-            var menuWindow = new MicroscopeGameMenuForm();
+            
             menuWindow.Show();
         }
 
         private void PlayerLabel_Click(object sender, EventArgs e)
         {
-            var playersWindow = new MicroscopePlayersForm();
+           
             playersWindow.Show();
         }
 
         private void Overview_Click(object sender, EventArgs e)
         {
-            var gameWindow = new MicroscopeOverviewForm();
+           
             gameWindow.Show();
+        }
+
+        private void PlayLabel_Click(object sender, EventArgs e)
+        {
+            playWindow.Show();
         }
     }
 }
