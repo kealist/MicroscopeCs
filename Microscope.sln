@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26730.3
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MicroscopeLibrary", "MicroscopeLibrary\MicroscopeLibrary.csproj", "{AD8D8581-154B-482B-A063-A49434505FAB}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicroscopeUI", "MicroscopeUI\MicroscopeUI.csproj", "{EDAEC80A-1C75-4B44-83DE-9930FFA7A045}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicroscopeLibrary", "MicroscopeLibrary\MicroscopeLibrary.csproj", "{57E92486-A5EC-48A3-8DFA-45796320DCD1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,14 +13,14 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{AD8D8581-154B-482B-A063-A49434505FAB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{AD8D8581-154B-482B-A063-A49434505FAB}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{AD8D8581-154B-482B-A063-A49434505FAB}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{AD8D8581-154B-482B-A063-A49434505FAB}.Release|Any CPU.Build.0 = Release|Any CPU
 		{EDAEC80A-1C75-4B44-83DE-9930FFA7A045}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{EDAEC80A-1C75-4B44-83DE-9930FFA7A045}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EDAEC80A-1C75-4B44-83DE-9930FFA7A045}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EDAEC80A-1C75-4B44-83DE-9930FFA7A045}.Release|Any CPU.Build.0 = Release|Any CPU
+		{57E92486-A5EC-48A3-8DFA-45796320DCD1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{57E92486-A5EC-48A3-8DFA-45796320DCD1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{57E92486-A5EC-48A3-8DFA-45796320DCD1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{57E92486-A5EC-48A3-8DFA-45796320DCD1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

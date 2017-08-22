@@ -30,14 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MicroscopeMainForm));
             this.Panel = new System.Windows.Forms.Panel();
-            this.Overview = new System.Windows.Forms.Label();
-            this.PlayerLabel = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.newGameToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.saveGameToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.loadGameToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1 = new System.Windows.Forms.Panel();
             this.button5 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
@@ -60,17 +52,25 @@
             this.PeriodDescriptionTextbox = new System.Windows.Forms.TextBox();
             this.LightRadioButton = new System.Windows.Forms.RadioButton();
             this.GameTreeView = new System.Windows.Forms.TreeView();
-            this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.preferencesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.Overview = new System.Windows.Forms.Label();
+            this.PlayerLabel = new System.Windows.Forms.Label();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.newGameToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.saveGameToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.loadGameToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exportViewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.hTMLToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.preferencesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.Panel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.EventInfoBox.SuspendLayout();
             this.SceneInfoBox.SuspendLayout();
             this.PeriodInfoBox.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // Panel
@@ -87,80 +87,6 @@
             this.Panel.Name = "Panel";
             this.Panel.Size = new System.Drawing.Size(1305, 724);
             this.Panel.TabIndex = 1;
-            // 
-            // Overview
-            // 
-            this.Overview.AutoSize = true;
-            this.Overview.Location = new System.Drawing.Point(80, 256);
-            this.Overview.Name = "Overview";
-            this.Overview.Size = new System.Drawing.Size(61, 17);
-            this.Overview.TabIndex = 3;
-            this.Overview.Text = "Overview";
-            // 
-            // PlayerLabel
-            // 
-            this.PlayerLabel.AutoSize = true;
-            this.PlayerLabel.Location = new System.Drawing.Point(80, 286);
-            this.PlayerLabel.Name = "PlayerLabel";
-            this.PlayerLabel.Size = new System.Drawing.Size(49, 17);
-            this.PlayerLabel.TabIndex = 2;
-            this.PlayerLabel.Text = "Players";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(3, 28);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(224, 214);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
-            // menuStrip1
-            // 
-            this.menuStrip1.BackColor = System.Drawing.Color.Transparent;
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.fileToolStripMenuItem,
-            this.editToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1305, 24);
-            this.menuStrip1.TabIndex = 6;
-            this.menuStrip1.Text = "menuStrip1";
-            // 
-            // fileToolStripMenuItem
-            // 
-            this.fileToolStripMenuItem.BackColor = System.Drawing.Color.Transparent;
-            this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.newGameToolStripMenuItem,
-            this.saveGameToolStripMenuItem,
-            this.loadGameToolStripMenuItem,
-            this.exportViewToolStripMenuItem});
-            this.fileToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
-            this.fileToolStripMenuItem.Text = "File";
-            // 
-            // newGameToolStripMenuItem
-            // 
-            this.newGameToolStripMenuItem.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.newGameToolStripMenuItem.Name = "newGameToolStripMenuItem";
-            this.newGameToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.newGameToolStripMenuItem.Text = "New Game";
-            // 
-            // saveGameToolStripMenuItem
-            // 
-            this.saveGameToolStripMenuItem.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.saveGameToolStripMenuItem.Name = "saveGameToolStripMenuItem";
-            this.saveGameToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.saveGameToolStripMenuItem.Text = "Save Game";
-            // 
-            // loadGameToolStripMenuItem
-            // 
-            this.loadGameToolStripMenuItem.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.loadGameToolStripMenuItem.Name = "loadGameToolStripMenuItem";
-            this.loadGameToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.loadGameToolStripMenuItem.Text = "Load Game";
             // 
             // panel1
             // 
@@ -393,6 +319,96 @@
             this.GameTreeView.Size = new System.Drawing.Size(325, 684);
             this.GameTreeView.TabIndex = 7;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(3, 28);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(224, 214);
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
+            // Overview
+            // 
+            this.Overview.AutoSize = true;
+            this.Overview.Location = new System.Drawing.Point(80, 256);
+            this.Overview.Name = "Overview";
+            this.Overview.Size = new System.Drawing.Size(61, 17);
+            this.Overview.TabIndex = 3;
+            this.Overview.Text = "Overview";
+            // 
+            // PlayerLabel
+            // 
+            this.PlayerLabel.AutoSize = true;
+            this.PlayerLabel.Location = new System.Drawing.Point(80, 286);
+            this.PlayerLabel.Name = "PlayerLabel";
+            this.PlayerLabel.Size = new System.Drawing.Size(49, 17);
+            this.PlayerLabel.TabIndex = 2;
+            this.PlayerLabel.Text = "Players";
+            // 
+            // menuStrip1
+            // 
+            this.menuStrip1.BackColor = System.Drawing.Color.Transparent;
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.fileToolStripMenuItem,
+            this.editToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(1305, 24);
+            this.menuStrip1.TabIndex = 6;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // fileToolStripMenuItem
+            // 
+            this.fileToolStripMenuItem.BackColor = System.Drawing.Color.Transparent;
+            this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.newGameToolStripMenuItem,
+            this.saveGameToolStripMenuItem,
+            this.loadGameToolStripMenuItem,
+            this.exportViewToolStripMenuItem});
+            this.fileToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
+            this.fileToolStripMenuItem.Text = "File";
+            // 
+            // newGameToolStripMenuItem
+            // 
+            this.newGameToolStripMenuItem.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.newGameToolStripMenuItem.Name = "newGameToolStripMenuItem";
+            this.newGameToolStripMenuItem.Size = new System.Drawing.Size(135, 22);
+            this.newGameToolStripMenuItem.Text = "New Game";
+            // 
+            // saveGameToolStripMenuItem
+            // 
+            this.saveGameToolStripMenuItem.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.saveGameToolStripMenuItem.Name = "saveGameToolStripMenuItem";
+            this.saveGameToolStripMenuItem.Size = new System.Drawing.Size(135, 22);
+            this.saveGameToolStripMenuItem.Text = "Save Game";
+            // 
+            // loadGameToolStripMenuItem
+            // 
+            this.loadGameToolStripMenuItem.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.loadGameToolStripMenuItem.Name = "loadGameToolStripMenuItem";
+            this.loadGameToolStripMenuItem.Size = new System.Drawing.Size(135, 22);
+            this.loadGameToolStripMenuItem.Text = "Load Game";
+            // 
+            // exportViewToolStripMenuItem
+            // 
+            this.exportViewToolStripMenuItem.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.exportViewToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.hTMLToolStripMenuItem});
+            this.exportViewToolStripMenuItem.Name = "exportViewToolStripMenuItem";
+            this.exportViewToolStripMenuItem.Size = new System.Drawing.Size(135, 22);
+            this.exportViewToolStripMenuItem.Text = "Export View";
+            // 
+            // hTMLToolStripMenuItem
+            // 
+            this.hTMLToolStripMenuItem.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.hTMLToolStripMenuItem.Name = "hTMLToolStripMenuItem";
+            this.hTMLToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
+            this.hTMLToolStripMenuItem.Text = "HTML";
+            // 
             // editToolStripMenuItem
             // 
             this.editToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -405,24 +421,8 @@
             // preferencesToolStripMenuItem
             // 
             this.preferencesToolStripMenuItem.Name = "preferencesToolStripMenuItem";
-            this.preferencesToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.preferencesToolStripMenuItem.Size = new System.Drawing.Size(135, 22);
             this.preferencesToolStripMenuItem.Text = "Preferences";
-            // 
-            // exportViewToolStripMenuItem
-            // 
-            this.exportViewToolStripMenuItem.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.exportViewToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.hTMLToolStripMenuItem});
-            this.exportViewToolStripMenuItem.Name = "exportViewToolStripMenuItem";
-            this.exportViewToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.exportViewToolStripMenuItem.Text = "Export View";
-            // 
-            // hTMLToolStripMenuItem
-            // 
-            this.hTMLToolStripMenuItem.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.hTMLToolStripMenuItem.Name = "hTMLToolStripMenuItem";
-            this.hTMLToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.hTMLToolStripMenuItem.Text = "HTML";
             // 
             // MicroscopeMainForm
             // 
@@ -436,9 +436,6 @@
             this.Text = "MicroscopeMainForm";
             this.Panel.ResumeLayout(false);
             this.Panel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.EventInfoBox.ResumeLayout(false);
             this.EventInfoBox.PerformLayout();
@@ -446,6 +443,9 @@
             this.SceneInfoBox.PerformLayout();
             this.PeriodInfoBox.ResumeLayout(false);
             this.PeriodInfoBox.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
 
         }

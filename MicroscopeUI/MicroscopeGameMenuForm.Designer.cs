@@ -31,17 +31,19 @@
             this.GameListBox = new System.Windows.Forms.ListBox();
             this.CurrentGameLabel = new System.Windows.Forms.Label();
             this.CurrentGameDataLabel = new System.Windows.Forms.Label();
-            this.NewGameButton = new System.Windows.Forms.Button();
-            this.LoadGameButton = new System.Windows.Forms.Button();
+            this.CreateGameButton = new System.Windows.Forms.Button();
+            this.BigPictureTextbox = new System.Windows.Forms.TextBox();
+            this.BigPictureLabel = new System.Windows.Forms.Label();
+            this.LoadSelectedButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // GameListBox
             // 
             this.GameListBox.FormattingEnabled = true;
             this.GameListBox.ItemHeight = 17;
-            this.GameListBox.Location = new System.Drawing.Point(135, 53);
+            this.GameListBox.Location = new System.Drawing.Point(16, 91);
             this.GameListBox.Name = "GameListBox";
-            this.GameListBox.Size = new System.Drawing.Size(243, 310);
+            this.GameListBox.Size = new System.Drawing.Size(496, 310);
             this.GameListBox.TabIndex = 0;
             // 
             // CurrentGameLabel
@@ -62,31 +64,51 @@
             this.CurrentGameDataLabel.TabIndex = 2;
             this.CurrentGameDataLabel.Text = "<Game.Description>";
             // 
-            // NewGameButton
+            // CreateGameButton
             // 
-            this.NewGameButton.Location = new System.Drawing.Point(16, 53);
-            this.NewGameButton.Name = "NewGameButton";
-            this.NewGameButton.Size = new System.Drawing.Size(113, 34);
-            this.NewGameButton.TabIndex = 3;
-            this.NewGameButton.Text = "New Game";
-            this.NewGameButton.UseVisualStyleBackColor = true;
+            this.CreateGameButton.Location = new System.Drawing.Point(518, 60);
+            this.CreateGameButton.Name = "CreateGameButton";
+            this.CreateGameButton.Size = new System.Drawing.Size(113, 25);
+            this.CreateGameButton.TabIndex = 3;
+            this.CreateGameButton.Text = "Create Game";
+            this.CreateGameButton.UseVisualStyleBackColor = true;
+            this.CreateGameButton.Click += new System.EventHandler(this.CreateGameButton_Click);
             // 
-            // LoadGameButton
+            // BigPictureTextbox
             // 
-            this.LoadGameButton.Location = new System.Drawing.Point(16, 93);
-            this.LoadGameButton.Name = "LoadGameButton";
-            this.LoadGameButton.Size = new System.Drawing.Size(113, 34);
-            this.LoadGameButton.TabIndex = 3;
-            this.LoadGameButton.Text = "Load Game";
-            this.LoadGameButton.UseVisualStyleBackColor = true;
+            this.BigPictureTextbox.Location = new System.Drawing.Point(16, 60);
+            this.BigPictureTextbox.Name = "BigPictureTextbox";
+            this.BigPictureTextbox.Size = new System.Drawing.Size(496, 25);
+            this.BigPictureTextbox.TabIndex = 4;
+            // 
+            // BigPictureLabel
+            // 
+            this.BigPictureLabel.AutoSize = true;
+            this.BigPictureLabel.Location = new System.Drawing.Point(13, 40);
+            this.BigPictureLabel.Name = "BigPictureLabel";
+            this.BigPictureLabel.Size = new System.Drawing.Size(161, 17);
+            this.BigPictureLabel.TabIndex = 5;
+            this.BigPictureLabel.Text = "Big Picture for New Game:";
+            // 
+            // LoadSelectedButton
+            // 
+            this.LoadSelectedButton.Location = new System.Drawing.Point(518, 91);
+            this.LoadSelectedButton.Name = "LoadSelectedButton";
+            this.LoadSelectedButton.Size = new System.Drawing.Size(113, 25);
+            this.LoadSelectedButton.TabIndex = 3;
+            this.LoadSelectedButton.Text = "Load Selected";
+            this.LoadSelectedButton.UseVisualStyleBackColor = true;
+            this.LoadSelectedButton.Click += new System.EventHandler(this.CreateGameButton_Click);
             // 
             // MicroscopeGameMenuForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(383, 368);
-            this.Controls.Add(this.LoadGameButton);
-            this.Controls.Add(this.NewGameButton);
+            this.ClientSize = new System.Drawing.Size(634, 409);
+            this.Controls.Add(this.BigPictureLabel);
+            this.Controls.Add(this.BigPictureTextbox);
+            this.Controls.Add(this.LoadSelectedButton);
+            this.Controls.Add(this.CreateGameButton);
             this.Controls.Add(this.CurrentGameDataLabel);
             this.Controls.Add(this.CurrentGameLabel);
             this.Controls.Add(this.GameListBox);
@@ -104,7 +126,9 @@
         private System.Windows.Forms.ListBox GameListBox;
         private System.Windows.Forms.Label CurrentGameLabel;
         private System.Windows.Forms.Label CurrentGameDataLabel;
-        private System.Windows.Forms.Button NewGameButton;
-        private System.Windows.Forms.Button LoadGameButton;
+        private System.Windows.Forms.Button CreateGameButton;
+        private System.Windows.Forms.TextBox BigPictureTextbox;
+        private System.Windows.Forms.Label BigPictureLabel;
+        private System.Windows.Forms.Button LoadSelectedButton;
     }
 }

@@ -5,6 +5,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MicroscopeLibrary;
+using MicroscopeLibrary.Models;
 
 namespace MicroscopeUI
 {
@@ -21,6 +22,7 @@ namespace MicroscopeUI
 
         public DbSet<LogModel> Logs { get; set; }
     }
+
     static class Program
     {
         /// <summary>
@@ -33,7 +35,11 @@ namespace MicroscopeUI
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MicroscopeMainForm());
+
+            //Initialize DB connections
+            GlobalConfig.InitializeConnections(true, false);
+
+            Application.Run(new MicroscopeGameMenuForm());
         }
     }
 }

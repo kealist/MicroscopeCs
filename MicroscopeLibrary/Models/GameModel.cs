@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace MicroscopeLibrary
+namespace MicroscopeLibrary.Models
 {
     public class GameModel
     {
@@ -11,5 +11,16 @@ namespace MicroscopeLibrary
         public List<PlayerModel> Players { get; set; } = new List<PlayerModel>();
         public List<LogModel> Logs { get; set; } = new List<LogModel>();
         public List<PaletteModel> Palettes { get; set; } = new List<PaletteModel>();
+
+        public void AddPeriod(PeriodModel period)
+        {
+            Periods.Add(period);
+        }
+
+        public GameModel(string description)
+        {
+            Description = description;
+        }
     }
+    
 }

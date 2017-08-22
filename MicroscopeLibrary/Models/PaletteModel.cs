@@ -1,6 +1,8 @@
-﻿namespace MicroscopeLibrary
+﻿namespace MicroscopeLibrary.Models
 {
     public class PaletteModel
+
+
     {
         public int Id { get; set; }
         public string Definition { get; set; }
