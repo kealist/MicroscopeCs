@@ -50,10 +50,10 @@
   <ItemGroup>
     <Compile Include="DataAccess\IDataConnection.cs" />
     <Compile Include="DataAccess\JSONConnector.cs" />
-    <Compile Include="DataAccess\SqlConnector.cs" />
-    <Compile Include="Migrations\201708221547548_Init.cs" />
-    <Compile Include="Migrations\201708221547548_Init.Designer.cs">
-      <DependentUpon>201708221547548_Init.cs</DependentUpon>
+    <Compile Include="DataAccess\EntityConnector.cs" />
+    <Compile Include="Migrations\201708221605061_Init.cs" />
+    <Compile Include="Migrations\201708221605061_Init.Designer.cs">
+      <DependentUpon>201708221605061_Init.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\CharacterModel.cs" />
@@ -74,8 +74,8 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201708221547548_Init.resx">
-      <DependentUpon>201708221547548_Init.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201708221605061_Init.resx">
+      <DependentUpon>201708221605061_Init.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

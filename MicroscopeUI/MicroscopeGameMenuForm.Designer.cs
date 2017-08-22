@@ -45,6 +45,7 @@
             this.GameListBox.Name = "GameListBox";
             this.GameListBox.Size = new System.Drawing.Size(496, 310);
             this.GameListBox.TabIndex = 0;
+            this.GameListBox.SelectedIndexChanged += new System.EventHandler(this.GameListBox_SelectedIndexChanged);
             // 
             // CurrentGameLabel
             // 

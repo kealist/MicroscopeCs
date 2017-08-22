@@ -18,5 +18,10 @@ namespace MicroscopeLibrary.DataAccess
             model.Id = 1;
             return model;
         }
+
+        public List<GameModel> GetGameList()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

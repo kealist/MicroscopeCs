@@ -16,6 +16,7 @@ namespace MicroscopeLibrary.Models
         {
             Periods.Add(period);
         }
+        public GameModel(){}
 
         public GameModel(string description)
         {

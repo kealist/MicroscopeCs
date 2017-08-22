@@ -9,5 +9,6 @@ namespace MicroscopeLibrary.DataAccess
     {
         PlayerModel CreatePlayer(PlayerModel model);
         GameModel CreateGame(GameModel model);
+        List<GameModel> GetGameList();
     }
 }

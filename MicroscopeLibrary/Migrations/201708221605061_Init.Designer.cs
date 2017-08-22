@@ -13,7 +13,7 @@ namespace MicroscopeLibrary.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "201708221547548_Init"; }
+            get { return "201708221605061_Init"; }
         }
         
         string IMigrationMetadata.Source

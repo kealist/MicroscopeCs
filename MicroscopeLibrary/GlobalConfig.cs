@@ -17,7 +17,7 @@ namespace MicroscopeLibrary
             if (database)
             {
                 // TODO - Create the MS SQL Express Connection
-                SqlConnector sql = new SqlConnector();
+                EntityConnector sql = new EntityConnector();
                 Connections.Add(sql);
             }
             if (json) {

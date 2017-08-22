@@ -18,6 +18,7 @@ namespace MicroscopeUI
         public MicroscopeGameMenuForm()
         {
             InitializeComponent();
+            
         }
 
         private void CreateGameButton_Click(object sender, EventArgs e)
@@ -29,6 +30,8 @@ namespace MicroscopeUI
                 foreach (IDataConnection db in GlobalConfig.Connections)
                 {
                     db.CreateGame(model);
+                    GameListBox.DataSource = db.GetGameList().Select(g => g.Description).ToList();
+                    GameListBox.Update();
                 }
                 BigPictureTextbox.Clear();
             }
@@ -45,6 +48,11 @@ namespace MicroscopeUI
             if (string.IsNullOrWhiteSpace(BigPictureTextbox.Text)) output = false;
             
             return output;
+        }
+
+        private void GameListBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
         }
     }
 }
