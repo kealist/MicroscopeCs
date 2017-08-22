@@ -15,33 +15,63 @@ namespace MicroscopeUI
 {
     public partial class MicroscopeGameMenuForm : Form
     {
-        public GameModel CurrentGame { get; set; }
+        public GameModel SelectedGame { get; set; }
         public MicroscopeGameMenuForm()
         {
             InitializeComponent();
-            
+
             GameListBox.DataSource = GlobalConfig.Connection.GetGameList().Select(g => g.Description).ToList();
             GameListBox.Update();
-            
+
         }
 
         private void CreateGameButton_Click(object sender, EventArgs e)
         {
-            Button current = (Button) sender;
-            //
-            if (ValidateForm())
+            Button button = (Button)sender;
+
+            if (button == CreateGameButton)
             {
-                GameModel model = new GameModel(BigPictureTextbox.Text);
-                GlobalConfig.Connection.CreateGame(model);
-                GameListBox.DataSource = GlobalConfig.Connection.GetGameList().Select(g => g.Description).ToList();
-                GameListBox.Update();
-                BigPictureTextbox.Clear();
+                if (ValidateForm())
+                {
+                    GameModel model = new GameModel(BigPictureTextbox.Text);
+                    GlobalConfig.Connection.CreateGame(model);
+                    GameListBox.DataSource = GlobalConfig.Connection.GetGameList().Select(g => g.Description).ToList();
+                    GameListBox.Update();
+                    BigPictureTextbox.Clear();
+                }
+                else
+                {
+                    MessageBox.Show("Non-Whitespace characters required to create game");
+                }
             }
-            else
+
+            if (button == LoadSelectedButton)
             {
-                MessageBox.Show("Non-Whitespace characters required to create game");
+                if (GlobalConfig.UnsavedChanges)
+                {
+                    DialogResult UserChoice = MessageBox.Show(
+                        "There are unsaved changes to current game that will be lost.  Are you sure you want to continue",
+                        "Microscope Load Game",
+                        MessageBoxButtons.YesNo,
+                        MessageBoxIcon.Warning);
+                    switch (UserChoice)
+                    {
+                        case DialogResult.Yes:
+                            GlobalConfig.CurrentGame = GlobalConfig.Connection.GetGame(GameListBox.SelectedIndex);
+                            break;
+                        case DialogResult.No:
+                            break;
+                    }
+                }
+                else
+                {
+
+                }
+                GlobalConfig.CurrentGame = GlobalConfig.Connection.GetGame(GameListBox.SelectedIndex);
             }
+
         }
+
 
         private bool ValidateForm()
         {
@@ -54,12 +84,12 @@ namespace MicroscopeUI
 
         private void GameListBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            CurrentGame = GlobalConfig.Connection.GetGame(GameListBox.SelectedIndex);
-            CurrrentDescriptionLabelData.Text = CurrentGame.Description;
+            SelectedGame = GlobalConfig.Connection.GetGame(GameListBox.SelectedIndex);
+            CurrrentDescriptionLabelData.Text = SelectedGame.Description;
             CurrrentDescriptionLabelData.Update();
-            CurrentNumPeriodsLabelData.Text = CurrentGame.Periods.Count.ToString();
+            CurrentNumPeriodsLabelData.Text = SelectedGame.Periods.Count.ToString();
             CurrentNumPeriodsLabelData.Update();
-            CurrentDateModifiedLabelData.Text = CurrentGame.DModified.ToString();
+            CurrentDateModifiedLabelData.Text = SelectedGame.DModified.ToString();
         }
     }
 }
