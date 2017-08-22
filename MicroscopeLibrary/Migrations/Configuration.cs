@@ -1,18 +1,18 @@
-namespace MicroscopeUI.Migrations
+namespace MicroscopeLibrary.Migrations
 {
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Migrations;
     using System.Linq;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<MicroscopeUI.MicroscopeDbContext>
+    internal sealed class Configuration : DbMigrationsConfiguration<MicroscopeLibrary.DataAccess.MicroscopeDbContext>
     {
         public Configuration()
         {
             AutomaticMigrationsEnabled = false;
         }
 
-        protected override void Seed(MicroscopeUI.MicroscopeDbContext context)
+        protected override void Seed(MicroscopeLibrary.DataAccess.MicroscopeDbContext context)
         {
             //  This method will be called after migrating to the latest version.
 

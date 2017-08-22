@@ -1,4 +1,4 @@
-namespace MicroscopeUI.Migrations
+namespace MicroscopeLibrary.Migrations
 {
     using System;
     using System.Data.Entity.Migrations;
