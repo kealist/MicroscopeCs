@@ -25,7 +25,7 @@ namespace MicroscopeUI
             Application.SetCompatibleTextRenderingDefault(false);
 
             //Initialize DB connections
-            GlobalConfig.InitializeConnections(true, false);
+            GlobalConfig.InitializeConnection(GlobalConfig.ConnectionType.EntityFramework);
 
             Application.Run(new MicroscopeGameMenuForm());
         }

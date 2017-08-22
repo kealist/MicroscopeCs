@@ -8,25 +8,27 @@ namespace MicroscopeLibrary
 {
     public static class GlobalConfig
     {
+        public enum ConnectionType { EntityFramework, Json } ;
         /// <summary>
         /// 
         /// </summary>
         public static IDataConnection Connection { get; private set; }
-        public static void InitializeConnections(bool database, bool json)
+        public static void InitializeConnection(ConnectionType connectionType)
         {
-            if (database)
+            switch (connectionType)
             {
-                // TODO - Create the MS SQL Express Connection
-                EntityConnector sql = new EntityConnector();
-                Connection = sql;
-            }
-            else if (json) {
-                // TODO - Create the JSON Connection
-                JsonConnector jsonCon = new JsonConnector();
-                Connection = jsonCon;
+                case ConnectionType.EntityFramework:
+                    EntityConnector sql = new EntityConnector();
+                    Connection = sql;
+                    break;
 
+                case ConnectionType.Json:
+                    JsonConnector jsonCon = new JsonConnector();
+                    Connection = jsonCon;
+                    break;
             }
         }
+        
         public static string CnnString(string name)
         {
             return ConfigurationManager.ConnectionStrings[name].ConnectionString;
