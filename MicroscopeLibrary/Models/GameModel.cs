@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace MicroscopeLibrary.Models
 {
@@ -11,6 +12,7 @@ namespace MicroscopeLibrary.Models
         public List<PlayerModel> Players { get; set; } = new List<PlayerModel>();
         public List<LogModel> Logs { get; set; } = new List<LogModel>();
         public List<PaletteModel> Palettes { get; set; } = new List<PaletteModel>();
+        public DateTime? DModified { get; set; }
 
         public void AddPeriod(PeriodModel period)
         {

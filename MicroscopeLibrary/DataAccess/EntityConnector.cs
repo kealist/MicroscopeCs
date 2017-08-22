@@ -45,6 +45,14 @@ namespace MicroscopeLibrary.DataAccess
             return model;
         }
 
+        public GameModel GetGame(int id)
+        {
+            using (MicroscopeDbContext connection = new MicroscopeDbContext())
+            {
+                return connection.Games.Where(g => g.Id == id + 1).First();
+            }
+        }
+
         public List<GameModel> GetGameList()
         {
             using (MicroscopeDbContext connection = new MicroscopeDbContext())

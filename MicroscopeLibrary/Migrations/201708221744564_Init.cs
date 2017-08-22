@@ -66,6 +66,7 @@ namespace MicroscopeLibrary.Migrations
                         Id = c.Int(nullable: false, identity: true),
                         Name = c.String(),
                         Description = c.String(),
+                        DModified = c.DateTime(),
                     })
                 .PrimaryKey(t => t.Id);
             

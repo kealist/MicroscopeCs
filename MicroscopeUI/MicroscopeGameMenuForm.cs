@@ -15,10 +15,15 @@ namespace MicroscopeUI
 {
     public partial class MicroscopeGameMenuForm : Form
     {
+        public GameModel CurrentGame { get; set; }
         public MicroscopeGameMenuForm()
         {
             InitializeComponent();
-            
+            foreach (IDataConnection db in GlobalConfig.Connections)
+            {
+                GameListBox.DataSource = db.GetGameList().Select(g => g.Description).ToList();
+                GameListBox.Update();
+            }
         }
 
         private void CreateGameButton_Click(object sender, EventArgs e)
@@ -52,7 +57,15 @@ namespace MicroscopeUI
 
         private void GameListBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            foreach (IDataConnection db in GlobalConfig.Connections)
+            {
+                CurrentGame = db.GetGame(GameListBox.SelectedIndex);
+                CurrrentDescriptionLabelData.Text = CurrentGame.Description;
+                CurrrentDescriptionLabelData.Update();
+                CurrentNumPeriodsLabelData.Text = CurrentGame.Periods.Count.ToString();
+                CurrentNumPeriodsLabelData.Update();
+                CurrentDateModifiedLabelData.Text = CurrentGame.DModified.ToString();
+            }
         }
     }
 }
