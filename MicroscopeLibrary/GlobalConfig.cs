@@ -11,19 +11,19 @@ namespace MicroscopeLibrary
         /// <summary>
         /// 
         /// </summary>
-        public static List<IDataConnection> Connections { get; private set; } = new List<IDataConnection>();
+        public static IDataConnection Connection { get; private set; }
         public static void InitializeConnections(bool database, bool json)
         {
             if (database)
             {
                 // TODO - Create the MS SQL Express Connection
                 EntityConnector sql = new EntityConnector();
-                Connections.Add(sql);
+                Connection = sql;
             }
-            if (json) {
+            else if (json) {
                 // TODO - Create the JSON Connection
                 JsonConnector jsonCon = new JsonConnector();
-                Connections.Add(jsonCon);
+                Connection = jsonCon;
 
             }
         }

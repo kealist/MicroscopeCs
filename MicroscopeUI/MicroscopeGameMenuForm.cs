@@ -19,25 +19,22 @@ namespace MicroscopeUI
         public MicroscopeGameMenuForm()
         {
             InitializeComponent();
-            foreach (IDataConnection db in GlobalConfig.Connections)
-            {
-                GameListBox.DataSource = db.GetGameList().Select(g => g.Description).ToList();
-                GameListBox.Update();
-            }
+            
+            GameListBox.DataSource = GlobalConfig.Connection.GetGameList().Select(g => g.Description).ToList();
+            GameListBox.Update();
+            
         }
 
         private void CreateGameButton_Click(object sender, EventArgs e)
         {
+            Button current = (Button) sender;
+            //
             if (ValidateForm())
             {
                 GameModel model = new GameModel(BigPictureTextbox.Text);
-                
-                foreach (IDataConnection db in GlobalConfig.Connections)
-                {
-                    db.CreateGame(model);
-                    GameListBox.DataSource = db.GetGameList().Select(g => g.Description).ToList();
-                    GameListBox.Update();
-                }
+                GlobalConfig.Connection.CreateGame(model);
+                GameListBox.DataSource = GlobalConfig.Connection.GetGameList().Select(g => g.Description).ToList();
+                GameListBox.Update();
                 BigPictureTextbox.Clear();
             }
             else
@@ -57,15 +54,12 @@ namespace MicroscopeUI
 
         private void GameListBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            foreach (IDataConnection db in GlobalConfig.Connections)
-            {
-                CurrentGame = db.GetGame(GameListBox.SelectedIndex);
-                CurrrentDescriptionLabelData.Text = CurrentGame.Description;
-                CurrrentDescriptionLabelData.Update();
-                CurrentNumPeriodsLabelData.Text = CurrentGame.Periods.Count.ToString();
-                CurrentNumPeriodsLabelData.Update();
-                CurrentDateModifiedLabelData.Text = CurrentGame.DModified.ToString();
-            }
+            CurrentGame = GlobalConfig.Connection.GetGame(GameListBox.SelectedIndex);
+            CurrrentDescriptionLabelData.Text = CurrentGame.Description;
+            CurrrentDescriptionLabelData.Update();
+            CurrentNumPeriodsLabelData.Text = CurrentGame.Periods.Count.ToString();
+            CurrentNumPeriodsLabelData.Update();
+            CurrentDateModifiedLabelData.Text = CurrentGame.DModified.ToString();
         }
     }
 }
