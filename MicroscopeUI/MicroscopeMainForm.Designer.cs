@@ -30,7 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MicroscopeMainForm));
             this.Panel = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.GameMenuButton = new System.Windows.Forms.Button();
+            this.Panelxxx = new System.Windows.Forms.Panel();
             this.button5 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
@@ -53,8 +54,6 @@
             this.LightRadioButton = new System.Windows.Forms.RadioButton();
             this.GameTreeView = new System.Windows.Forms.TreeView();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.Overview = new System.Windows.Forms.Label();
-            this.PlayerLabel = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.newGameToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -65,7 +64,7 @@
             this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.preferencesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.Panel.SuspendLayout();
-            this.panel1.SuspendLayout();
+            this.Panelxxx.SuspendLayout();
             this.EventInfoBox.SuspendLayout();
             this.SceneInfoBox.SuspendLayout();
             this.PeriodInfoBox.SuspendLayout();
@@ -76,10 +75,9 @@
             // Panel
             // 
             this.Panel.BackColor = System.Drawing.Color.Black;
-            this.Panel.Controls.Add(this.panel1);
+            this.Panel.Controls.Add(this.GameMenuButton);
+            this.Panel.Controls.Add(this.Panelxxx);
             this.Panel.Controls.Add(this.pictureBox1);
-            this.Panel.Controls.Add(this.Overview);
-            this.Panel.Controls.Add(this.PlayerLabel);
             this.Panel.Controls.Add(this.menuStrip1);
             this.Panel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Panel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
@@ -88,29 +86,40 @@
             this.Panel.Size = new System.Drawing.Size(1305, 724);
             this.Panel.TabIndex = 1;
             // 
-            // panel1
+            // GameMenuButton
             // 
-            this.panel1.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel1.Controls.Add(this.button5);
-            this.panel1.Controls.Add(this.button4);
-            this.panel1.Controls.Add(this.button3);
-            this.panel1.Controls.Add(this.button1);
-            this.panel1.Controls.Add(this.button2);
-            this.panel1.Controls.Add(this.AddCharacterButton);
-            this.panel1.Controls.Add(this.DeleteSelectedButton);
-            this.panel1.Controls.Add(this.AddSceneButton);
-            this.panel1.Controls.Add(this.AddEventButton);
-            this.panel1.Controls.Add(this.AddPeriodButton);
-            this.panel1.Controls.Add(this.CharacterInfoBox);
-            this.panel1.Controls.Add(this.EventInfoBox);
-            this.panel1.Controls.Add(this.SceneInfoBox);
-            this.panel1.Controls.Add(this.PeriodInfoBox);
-            this.panel1.Controls.Add(this.GameTreeView);
-            this.panel1.Location = new System.Drawing.Point(234, 28);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1069, 694);
-            this.panel1.TabIndex = 7;
+            this.GameMenuButton.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.GameMenuButton.Location = new System.Drawing.Point(9, 248);
+            this.GameMenuButton.Name = "GameMenuButton";
+            this.GameMenuButton.Size = new System.Drawing.Size(215, 25);
+            this.GameMenuButton.TabIndex = 8;
+            this.GameMenuButton.Text = "New / Load Game";
+            this.GameMenuButton.UseVisualStyleBackColor = true;
+            this.GameMenuButton.Click += new System.EventHandler(this.GameMenuButton_Click);
+            // 
+            // Panelxxx
+            // 
+            this.Panelxxx.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.Panelxxx.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.Panelxxx.Controls.Add(this.button5);
+            this.Panelxxx.Controls.Add(this.button4);
+            this.Panelxxx.Controls.Add(this.button3);
+            this.Panelxxx.Controls.Add(this.button1);
+            this.Panelxxx.Controls.Add(this.button2);
+            this.Panelxxx.Controls.Add(this.AddCharacterButton);
+            this.Panelxxx.Controls.Add(this.DeleteSelectedButton);
+            this.Panelxxx.Controls.Add(this.AddSceneButton);
+            this.Panelxxx.Controls.Add(this.AddEventButton);
+            this.Panelxxx.Controls.Add(this.AddPeriodButton);
+            this.Panelxxx.Controls.Add(this.CharacterInfoBox);
+            this.Panelxxx.Controls.Add(this.EventInfoBox);
+            this.Panelxxx.Controls.Add(this.SceneInfoBox);
+            this.Panelxxx.Controls.Add(this.PeriodInfoBox);
+            this.Panelxxx.Controls.Add(this.GameTreeView);
+            this.Panelxxx.Location = new System.Drawing.Point(234, 28);
+            this.Panelxxx.Name = "Panelxxx";
+            this.Panelxxx.Size = new System.Drawing.Size(1069, 694);
+            this.Panelxxx.TabIndex = 7;
             // 
             // button5
             // 
@@ -329,24 +338,6 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // Overview
-            // 
-            this.Overview.AutoSize = true;
-            this.Overview.Location = new System.Drawing.Point(80, 256);
-            this.Overview.Name = "Overview";
-            this.Overview.Size = new System.Drawing.Size(61, 17);
-            this.Overview.TabIndex = 3;
-            this.Overview.Text = "Overview";
-            // 
-            // PlayerLabel
-            // 
-            this.PlayerLabel.AutoSize = true;
-            this.PlayerLabel.Location = new System.Drawing.Point(80, 286);
-            this.PlayerLabel.Name = "PlayerLabel";
-            this.PlayerLabel.Size = new System.Drawing.Size(49, 17);
-            this.PlayerLabel.TabIndex = 2;
-            this.PlayerLabel.Text = "Players";
-            // 
             // menuStrip1
             // 
             this.menuStrip1.BackColor = System.Drawing.Color.Transparent;
@@ -436,7 +427,7 @@
             this.Text = "MicroscopeMainForm";
             this.Panel.ResumeLayout(false);
             this.Panel.PerformLayout();
-            this.panel1.ResumeLayout(false);
+            this.Panelxxx.ResumeLayout(false);
             this.EventInfoBox.ResumeLayout(false);
             this.EventInfoBox.PerformLayout();
             this.SceneInfoBox.ResumeLayout(false);
@@ -453,15 +444,13 @@
         #endregion
 
         private System.Windows.Forms.Panel Panel;
-        private System.Windows.Forms.Label Overview;
-        private System.Windows.Forms.Label PlayerLabel;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem newGameToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem saveGameToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem loadGameToolStripMenuItem;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel Panelxxx;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button3;
@@ -487,5 +476,6 @@
         private System.Windows.Forms.ToolStripMenuItem editToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem preferencesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem hTMLToolStripMenuItem;
+        private System.Windows.Forms.Button GameMenuButton;
     }
 }

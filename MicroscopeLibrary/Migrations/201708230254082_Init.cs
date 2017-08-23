@@ -24,13 +24,10 @@ namespace MicroscopeLibrary.Migrations
                         Id = c.Int(nullable: false, identity: true),
                         Question = c.String(),
                         Dialog = c.String(),
-                        PeriodModel_Id = c.Int(),
                         Parent_Id = c.Int(),
                     })
                 .PrimaryKey(t => t.Id)
-                .ForeignKey("dbo.PeriodModels", t => t.PeriodModel_Id)
                 .ForeignKey("dbo.EventModels", t => t.Parent_Id)
-                .Index(t => t.PeriodModel_Id)
                 .Index(t => t.Parent_Id);
             
             CreateTable(
@@ -136,13 +133,12 @@ namespace MicroscopeLibrary.Migrations
         public override void Down()
         {
             DropForeignKey("dbo.SceneModels", "Parent_Id", "dbo.EventModels");
-            DropForeignKey("dbo.EventModels", "Parent_Id", "dbo.PeriodModels");
-            DropForeignKey("dbo.SceneModels", "PeriodModel_Id", "dbo.PeriodModels");
             DropForeignKey("dbo.PlayerModelGameModels", "GameModel_Id", "dbo.GameModels");
             DropForeignKey("dbo.PlayerModelGameModels", "PlayerModel_Id", "dbo.PlayerModels");
             DropForeignKey("dbo.PeriodModels", "Parent_Id", "dbo.GameModels");
             DropForeignKey("dbo.PaletteModels", "GameModel_Id", "dbo.GameModels");
             DropForeignKey("dbo.LogModels", "GameModel_Id", "dbo.GameModels");
+            DropForeignKey("dbo.EventModels", "Parent_Id", "dbo.PeriodModels");
             DropForeignKey("dbo.SceneModelCharacterModels", "CharacterModel_Id", "dbo.CharacterModels");
             DropForeignKey("dbo.SceneModelCharacterModels", "SceneModel_Id", "dbo.SceneModels");
             DropIndex("dbo.PlayerModelGameModels", new[] { "GameModel_Id" });
@@ -154,7 +150,6 @@ namespace MicroscopeLibrary.Migrations
             DropIndex("dbo.PeriodModels", new[] { "Parent_Id" });
             DropIndex("dbo.EventModels", new[] { "Parent_Id" });
             DropIndex("dbo.SceneModels", new[] { "Parent_Id" });
-            DropIndex("dbo.SceneModels", new[] { "PeriodModel_Id" });
             DropTable("dbo.PlayerModelGameModels");
             DropTable("dbo.SceneModelCharacterModels");
             DropTable("dbo.PlayerModels");

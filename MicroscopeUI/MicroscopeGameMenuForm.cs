@@ -38,6 +38,7 @@ namespace MicroscopeUI
                     GameListBox.DataSource = GlobalConfig.Connection.GetGameList().Select(g => g.Description).ToList();
                     GameListBox.Update();
                     BigPictureTextbox.Clear();
+                    Program.MainForm.PopulateTreeView(model);
                 }
                 else
                 {
@@ -57,7 +58,9 @@ namespace MicroscopeUI
                     switch (UserChoice)
                     {
                         case DialogResult.Yes:
-                            GlobalConfig.CurrentGame = GlobalConfig.Connection.GetGame(GameListBox.SelectedIndex);
+                            var gameModel = GlobalConfig.Connection.GetGame(GameListBox.SelectedIndex);
+                            GlobalConfig.CurrentGame = gameModel;
+                            Program.MainForm.PopulateTreeView(gameModel);
                             break;
                         case DialogResult.No:
                             break;

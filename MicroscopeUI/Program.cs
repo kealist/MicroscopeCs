@@ -13,6 +13,7 @@ namespace MicroscopeUI
     static class Program
     {
         static GameModel LoadedGame { get; set; }
+        public static MicroscopeMainForm MainForm;
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
@@ -27,7 +28,8 @@ namespace MicroscopeUI
             //Initialize DB connections
             GlobalConfig.InitializeConnection(GlobalConfig.ConnectionType.EntityFramework);
 
-            Application.Run(new MicroscopeGameMenuForm());
+            MainForm = new MicroscopeMainForm();
+            Application.Run(MainForm);
         }
     }
 }
