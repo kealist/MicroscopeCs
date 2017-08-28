@@ -10,6 +10,7 @@ namespace MicroscopeLibrary.DataAccess
         PlayerModel CreatePlayer(PlayerModel model);
         GameModel CreateGame(GameModel model);
         GameModel GetGame(int id);
+        PeriodModel GetPeriod(int id);
         List<GameModel> GetGameList();
     }
 }

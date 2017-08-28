@@ -61,5 +61,10 @@ namespace MicroscopeLibrary.DataAccess
                 return connection.Games.ToList();
             }
         }
+
+        public PeriodModel GetPeriod(int id)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

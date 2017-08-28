@@ -48,9 +48,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataAccess\FileConnector.cs" />
     <Compile Include="DataAccess\IDataConnection.cs" />
     <Compile Include="DataAccess\JSONConnector.cs" />
     <Compile Include="DataAccess\EntityConnector.cs" />
+    <Compile Include="DataAccess\TextConnectorProcessor.cs" />
     <Compile Include="Migrations\201708230254082_Init.cs" />
     <Compile Include="Migrations\201708230254082_Init.Designer.cs">
       <DependentUpon>201708230254082_Init.cs</DependentUpon>
