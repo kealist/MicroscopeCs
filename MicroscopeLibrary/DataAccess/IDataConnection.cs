@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace MicroscopeLibrary.DataAccess
 {
@@ -12,6 +13,7 @@ namespace MicroscopeLibrary.DataAccess
         GameModel GetGame(int id);
         PeriodModel GetPeriod(int id);
         PeriodModel CreatePeriod(PeriodModel model);
+        PeriodModel UpdatePeriod(PeriodModel model);
         EventModel GetEvent(EventModel model);
         EventModel CreateEvent(EventModel model);
         SceneModel GetScene(SceneModel model);

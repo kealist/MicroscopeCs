@@ -8,12 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MicroscopeLibrary.Models;
+using MicroscopeLibrary;
 
 namespace MicroscopeUI
 {
     public partial class MicroscopeMainForm : Form
     {
-        
+
         public MicroscopeMainForm()
         {
             InitializeComponent();
@@ -80,6 +81,26 @@ namespace MicroscopeUI
                 var gameMenu = new MicroscopeGameMenuForm();
                 gameMenu.Show();
             }
+        }
+
+        private void AddPeriodContext_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void AddEventContext_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void AddSceneContext_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void addPeriodToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
         }
     }
 

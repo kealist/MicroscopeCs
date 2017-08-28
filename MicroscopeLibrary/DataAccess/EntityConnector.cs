@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Data.Entity;
 using System.Linq;
+using System.Threading.Tasks;
 
 namespace MicroscopeLibrary.DataAccess
 {
@@ -21,6 +22,7 @@ namespace MicroscopeLibrary.DataAccess
 
         public DbSet<LogModel> Logs { get; set; }
     }
+
     class EntityConnector : IDataConnection
     {
         public EventModel CreateEvent(EventModel model)
@@ -49,7 +51,7 @@ namespace MicroscopeLibrary.DataAccess
         {
             using (MicroscopeDbContext connection = new MicroscopeDbContext())
             {
-
+                
             }
             return model;
         }
@@ -88,6 +90,18 @@ namespace MicroscopeLibrary.DataAccess
 
         public SceneModel GetScene(SceneModel model)
         {
+            throw new NotImplementedException();
+        }
+
+        public PeriodModel UpdatePeriod(PeriodModel model)
+        {
+            /*
+             * db.Users.Attach(updatedUser);
+               var entry = db.Entry(updatedUser);
+               entry.Property(e => e.Email).IsModified = true;
+               // other changed properties
+               db.SaveChanges();
+             */
             throw new NotImplementedException();
         }
     }

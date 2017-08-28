@@ -70,5 +70,10 @@ namespace MicroscopeLibrary.DataAccess
         {
             throw new NotImplementedException();
         }
+
+        public PeriodModel UpdatePeriod(PeriodModel model)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
