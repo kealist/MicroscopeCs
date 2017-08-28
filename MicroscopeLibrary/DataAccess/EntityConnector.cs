@@ -23,6 +23,10 @@ namespace MicroscopeLibrary.DataAccess
     }
     class EntityConnector : IDataConnection
     {
+        public EventModel CreateEvent(EventModel model)
+        {
+            throw new NotImplementedException();
+        }
 
         public GameModel CreateGame(GameModel model)
         {
@@ -34,6 +38,11 @@ namespace MicroscopeLibrary.DataAccess
             return model;
         }
 
+        public PeriodModel CreatePeriod(PeriodModel model)
+        {
+            throw new NotImplementedException();
+        }
+
 
         // TODO - Impletment SQL code
         public PlayerModel CreatePlayer(PlayerModel model)
@@ -43,6 +52,16 @@ namespace MicroscopeLibrary.DataAccess
 
             }
             return model;
+        }
+
+        public SceneModel CreateScene(SceneModel model)
+        {
+            throw new NotImplementedException();
+        }
+
+        public EventModel GetEvent(EventModel model)
+        {
+            throw new NotImplementedException();
         }
 
         public GameModel GetGame(int id)
@@ -63,6 +82,11 @@ namespace MicroscopeLibrary.DataAccess
         }
 
         public PeriodModel GetPeriod(int id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public SceneModel GetScene(SceneModel model)
         {
             throw new NotImplementedException();
         }

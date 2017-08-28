@@ -15,6 +15,11 @@ namespace MicroscopeLibrary.DataAccess
         private const string ScenesFile = "SceneModels.csv";
         private const string CharactersFile = "CharacterModels.csv";
 
+        public EventModel CreateEvent(EventModel model)
+        {
+            throw new NotImplementedException();
+        }
+
         public GameModel CreateGame(GameModel model)
         {
             // Load the text file
@@ -26,7 +31,22 @@ namespace MicroscopeLibrary.DataAccess
             throw new NotImplementedException();
         }
 
+        public PeriodModel CreatePeriod(PeriodModel model)
+        {
+            throw new NotImplementedException();
+        }
+
         public PlayerModel CreatePlayer(PlayerModel model)
+        {
+            throw new NotImplementedException();
+        }
+
+        public SceneModel CreateScene(SceneModel model)
+        {
+            throw new NotImplementedException();
+        }
+
+        public EventModel GetEvent(EventModel model)
         {
             throw new NotImplementedException();
         }
@@ -42,6 +62,11 @@ namespace MicroscopeLibrary.DataAccess
         }
 
         public PeriodModel GetPeriod(int id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public SceneModel GetScene(SceneModel model)
         {
             throw new NotImplementedException();
         }

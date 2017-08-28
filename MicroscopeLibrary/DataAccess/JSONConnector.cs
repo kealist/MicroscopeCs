@@ -7,7 +7,17 @@ namespace MicroscopeLibrary.DataAccess
 {
     public class JsonConnector : IDataConnection
     {
+        public EventModel CreateEvent(EventModel model)
+        {
+            throw new NotImplementedException();
+        }
+
         public GameModel CreateGame(GameModel model)
+        {
+            throw new NotImplementedException();
+        }
+
+        public PeriodModel CreatePeriod(PeriodModel model)
         {
             throw new NotImplementedException();
         }
@@ -17,6 +27,16 @@ namespace MicroscopeLibrary.DataAccess
         {
             model.Id = 1;
             return model;
+        }
+
+        public SceneModel CreateScene(SceneModel model)
+        {
+            throw new NotImplementedException();
+        }
+
+        public EventModel GetEvent(EventModel model)
+        {
+            throw new NotImplementedException();
         }
 
         public GameModel GetGame(int id)
@@ -30,6 +50,11 @@ namespace MicroscopeLibrary.DataAccess
         }
 
         public PeriodModel GetPeriod(int id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public SceneModel GetScene(SceneModel model)
         {
             throw new NotImplementedException();
         }
