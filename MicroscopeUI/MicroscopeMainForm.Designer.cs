@@ -55,6 +55,11 @@
             this.LightRadioButton = new System.Windows.Forms.RadioButton();
             this.GameTreeView = new System.Windows.Forms.TreeView();
             this.GameContextMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.addPeriodToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.AddPeriodContext = new System.Windows.Forms.ToolStripMenuItem();
+            this.AddEventContext = new System.Windows.Forms.ToolStripMenuItem();
+            this.AddSceneContext = new System.Windows.Forms.ToolStripMenuItem();
+            this.EditContext = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -65,11 +70,6 @@
             this.hTMLToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.preferencesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.addPeriodToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.AddPeriodContext = new System.Windows.Forms.ToolStripMenuItem();
-            this.AddEventContext = new System.Windows.Forms.ToolStripMenuItem();
-            this.AddSceneContext = new System.Windows.Forms.ToolStripMenuItem();
-            this.EditContext = new System.Windows.Forms.ToolStripMenuItem();
             this.Panel.SuspendLayout();
             this.Panelxxx.SuspendLayout();
             this.EventInfoBox.SuspendLayout();
@@ -337,6 +337,7 @@
             this.GameTreeView.Name = "GameTreeView";
             this.GameTreeView.Size = new System.Drawing.Size(325, 684);
             this.GameTreeView.TabIndex = 7;
+            this.GameTreeView.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.GameTreeView_AfterSelect);
             // 
             // GameContextMenu
             // 
@@ -344,7 +345,45 @@
             this.addPeriodToolStripMenuItem,
             this.EditContext});
             this.GameContextMenu.Name = "contextMenuStrip1";
-            this.GameContextMenu.Size = new System.Drawing.Size(153, 70);
+            this.GameContextMenu.Size = new System.Drawing.Size(103, 48);
+            // 
+            // addPeriodToolStripMenuItem
+            // 
+            this.addPeriodToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.AddPeriodContext,
+            this.AddEventContext,
+            this.AddSceneContext});
+            this.addPeriodToolStripMenuItem.Name = "addPeriodToolStripMenuItem";
+            this.addPeriodToolStripMenuItem.Size = new System.Drawing.Size(102, 22);
+            this.addPeriodToolStripMenuItem.Text = "Add..";
+            this.addPeriodToolStripMenuItem.Click += new System.EventHandler(this.addPeriodToolStripMenuItem_Click);
+            // 
+            // AddPeriodContext
+            // 
+            this.AddPeriodContext.Name = "AddPeriodContext";
+            this.AddPeriodContext.Size = new System.Drawing.Size(108, 22);
+            this.AddPeriodContext.Text = "Period";
+            this.AddPeriodContext.Click += new System.EventHandler(this.AddPeriodContext_Click);
+            // 
+            // AddEventContext
+            // 
+            this.AddEventContext.Name = "AddEventContext";
+            this.AddEventContext.Size = new System.Drawing.Size(108, 22);
+            this.AddEventContext.Text = "Event";
+            this.AddEventContext.Click += new System.EventHandler(this.AddEventContext_Click);
+            // 
+            // AddSceneContext
+            // 
+            this.AddSceneContext.Name = "AddSceneContext";
+            this.AddSceneContext.Size = new System.Drawing.Size(108, 22);
+            this.AddSceneContext.Text = "Scene";
+            this.AddSceneContext.Click += new System.EventHandler(this.AddSceneContext_Click);
+            // 
+            // EditContext
+            // 
+            this.EditContext.Name = "EditContext";
+            this.EditContext.Size = new System.Drawing.Size(102, 22);
+            this.EditContext.Text = "Edit";
             // 
             // pictureBox1
             // 
@@ -430,46 +469,8 @@
             // preferencesToolStripMenuItem
             // 
             this.preferencesToolStripMenuItem.Name = "preferencesToolStripMenuItem";
-            this.preferencesToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.preferencesToolStripMenuItem.Size = new System.Drawing.Size(135, 22);
             this.preferencesToolStripMenuItem.Text = "Preferences";
-            // 
-            // addPeriodToolStripMenuItem
-            // 
-            this.addPeriodToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.AddPeriodContext,
-            this.AddEventContext,
-            this.AddSceneContext});
-            this.addPeriodToolStripMenuItem.Name = "addPeriodToolStripMenuItem";
-            this.addPeriodToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.addPeriodToolStripMenuItem.Text = "Add..";
-            this.addPeriodToolStripMenuItem.Click += new System.EventHandler(this.addPeriodToolStripMenuItem_Click);
-            // 
-            // AddPeriodContext
-            // 
-            this.AddPeriodContext.Name = "AddPeriodContext";
-            this.AddPeriodContext.Size = new System.Drawing.Size(152, 22);
-            this.AddPeriodContext.Text = "Period";
-            this.AddPeriodContext.Click += new System.EventHandler(this.AddPeriodContext_Click);
-            // 
-            // AddEventContext
-            // 
-            this.AddEventContext.Name = "AddEventContext";
-            this.AddEventContext.Size = new System.Drawing.Size(152, 22);
-            this.AddEventContext.Text = "Event";
-            this.AddEventContext.Click += new System.EventHandler(this.AddEventContext_Click);
-            // 
-            // AddSceneContext
-            // 
-            this.AddSceneContext.Name = "AddSceneContext";
-            this.AddSceneContext.Size = new System.Drawing.Size(152, 22);
-            this.AddSceneContext.Text = "Scene";
-            this.AddSceneContext.Click += new System.EventHandler(this.AddSceneContext_Click);
-            // 
-            // EditContext
-            // 
-            this.EditContext.Name = "EditContext";
-            this.EditContext.Size = new System.Drawing.Size(152, 22);
-            this.EditContext.Text = "Edit";
             // 
             // MicroscopeMainForm
             // 

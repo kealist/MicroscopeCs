@@ -20,7 +20,7 @@ namespace MicroscopeUI
             InitializeComponent();
         }
 
-        public void PopulateTreeView(GameModel game)
+        public void PopulateTreeView(ElementModel game)
         {
             GameTreeView.Nodes.Clear();
             var gameNode = new TreeNode(game.Description);
@@ -29,7 +29,7 @@ namespace MicroscopeUI
                 Type = ModelTypes.Game,
                 Id = game.Id
             };
-            foreach (var period in game.Periods)
+            foreach (var period in game.Children)
             {
                 var periodNode = new TreeNode(period.Description);
                 periodNode.Tag = new TagModel
@@ -37,7 +37,7 @@ namespace MicroscopeUI
                     Type = ModelTypes.Period,
                     Id = period.Id
                 };
-                foreach (EventModel evnt in period.Events)
+                foreach (var evnt in period.Children)
                 {
                     var eventNode = new TreeNode(evnt.Description);
                     eventNode.Tag = new TagModel
@@ -45,17 +45,17 @@ namespace MicroscopeUI
                         Type = ModelTypes.Event,
                         Id = evnt.Id
                     };
-                    foreach (var scene in evnt.Scenes)
+                    foreach (var scene in evnt.Children)
                     {
-                        var sceneNode = new TreeNode(scene.Question);
+                        var sceneNode = new TreeNode(scene.Description);
                         sceneNode.Tag = new TagModel
                         {
                             Type = ModelTypes.Scene,
                             Id = scene.Id
                         };
-                        foreach (var character in scene.Characters)
+                        foreach (var character in scene.Children)
                         {
-                            var characterNode = new TreeNode(character.FirstName);
+                            var characterNode = new TreeNode(character.Description);
                             characterNode.Tag = new TagModel
                             {
                                 Type = ModelTypes.Character,
@@ -98,7 +98,12 @@ namespace MicroscopeUI
 
         }
 
-        private void addPeriodToolStripMenuItem_Click(object sender, EventArgs e)
+        private void AddPeriodToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void GameTreeView_AfterSelect(object sender, TreeViewEventArgs e)
         {
 
         }

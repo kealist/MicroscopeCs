@@ -33,12 +33,12 @@ namespace MicroscopeUI
             {
                 if (ValidateForm())
                 {
-                    GameModel model = new GameModel(BigPictureTextbox.Text);
-                    GlobalConfig.Connection.CreateGame(model);
+                    ElementModel game = new ElementModel(ModelTypes.Game,null,BigPictureTextbox.Text);
+                    GlobalConfig.Connection.CreateGame(game);
                     GameListBox.DataSource = GlobalConfig.Connection.GetGameList().Select(g => g.Description).ToList();
                     GameListBox.Update();
                     BigPictureTextbox.Clear();
-                    Program.MainForm.PopulateTreeView(model);
+                    Program.MainForm.PopulateTreeView(game);
                 }
                 else
                 {

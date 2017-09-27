@@ -59,6 +59,7 @@
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\CharacterModel.cs" />
+    <Compile Include="Models\ElementModel.cs" />
     <Compile Include="Models\EventModel.cs" />
     <Compile Include="Models\GameModel.cs" />
     <Compile Include="GlobalConfig.cs" />

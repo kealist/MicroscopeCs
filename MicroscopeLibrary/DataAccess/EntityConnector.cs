@@ -11,6 +11,7 @@ namespace MicroscopeLibrary.DataAccess
     public class MicroscopeDbContext : DbContext
     {
         public MicroscopeDbContext() :base(GlobalConfig.CnnString("SQLExpress")){}
+        public DbSet<ElementModel> Elements { get; set; }
         public DbSet<GameModel> Games { get; set; }
         public DbSet<PlayerModel> Players { get; set; }
         public DbSet<PaletteModel> Palettes { get; set; }
@@ -25,43 +26,37 @@ namespace MicroscopeLibrary.DataAccess
 
     class EntityConnector : IDataConnection
     {
-        public EventModel CreateEvent(EventModel model)
+        public ElementModel CreateEvent(ElementModel model)
         {
             throw new NotImplementedException();
         }
 
-        public GameModel CreateGame(GameModel model)
+        public ElementModel CreateGame(ElementModel model)
         {
             using (MicroscopeDbContext connection = new MicroscopeDbContext())
             {
-                connection.Games.Add(model);
+                connection.Elements.Add(model);
                 connection.SaveChanges();
             }
             return model;
         }
 
-        public PeriodModel CreatePeriod(PeriodModel model)
+        public ElementModel CreatePeriod(ElementModel period)
         {
             throw new NotImplementedException();
         }
 
-
-        // TODO - Impletment SQL code
         public PlayerModel CreatePlayer(PlayerModel model)
         {
-            using (MicroscopeDbContext connection = new MicroscopeDbContext())
-            {
-                
-            }
-            return model;
+            throw new NotImplementedException();
         }
 
-        public SceneModel CreateScene(SceneModel model)
+        public ElementModel CreateScene(ElementModel model)
         {
             throw new NotImplementedException();
         }
 
-        public EventModel GetEvent(EventModel model)
+        public ElementModel GetEvent(ElementModel model)
         {
             throw new NotImplementedException();
         }
@@ -93,6 +88,11 @@ namespace MicroscopeLibrary.DataAccess
             throw new NotImplementedException();
         }
 
+        public ElementModel GetScene(ElementModel model)
+        {
+            throw new NotImplementedException();
+        }
+
         public PeriodModel UpdatePeriod(PeriodModel model)
         {
             /*
@@ -102,6 +102,21 @@ namespace MicroscopeLibrary.DataAccess
                // other changed properties
                db.SaveChanges();
              */
+            throw new NotImplementedException();
+        }
+
+        public ElementModel UpdatePeriod(ElementModel model)
+        {
+            throw new NotImplementedException();
+        }
+
+        ElementModel IDataConnection.GetGame(int id)
+        {
+            throw new NotImplementedException();
+        }
+
+        ElementModel IDataConnection.GetPeriod(int id)
+        {
             throw new NotImplementedException();
         }
     }
