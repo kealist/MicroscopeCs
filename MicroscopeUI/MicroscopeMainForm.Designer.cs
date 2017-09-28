@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MicroscopeMainForm));
             this.Panel = new System.Windows.Forms.Panel();
             this.GameMenuButton = new System.Windows.Forms.Button();
             this.Panelxxx = new System.Windows.Forms.Panel();
@@ -70,6 +69,7 @@
             this.hTMLToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.preferencesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.label1 = new System.Windows.Forms.Label();
             this.Panel.SuspendLayout();
             this.Panelxxx.SuspendLayout();
             this.EventInfoBox.SuspendLayout();
@@ -83,6 +83,7 @@
             // Panel
             // 
             this.Panel.BackColor = System.Drawing.Color.Black;
+            this.Panel.Controls.Add(this.label1);
             this.Panel.Controls.Add(this.GameMenuButton);
             this.Panel.Controls.Add(this.Panelxxx);
             this.Panel.Controls.Add(this.pictureBox1);
@@ -356,7 +357,6 @@
             this.addPeriodToolStripMenuItem.Name = "addPeriodToolStripMenuItem";
             this.addPeriodToolStripMenuItem.Size = new System.Drawing.Size(102, 22);
             this.addPeriodToolStripMenuItem.Text = "Add..";
-            this.addPeriodToolStripMenuItem.Click += new System.EventHandler(this.addPeriodToolStripMenuItem_Click);
             // 
             // AddPeriodContext
             // 
@@ -388,7 +388,6 @@
             // pictureBox1
             // 
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(3, 28);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(224, 214);
@@ -472,6 +471,16 @@
             this.preferencesToolStripMenuItem.Size = new System.Drawing.Size(135, 22);
             this.preferencesToolStripMenuItem.Text = "Preferences";
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(13, 33);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(212, 50);
+            this.label1.TabIndex = 9;
+            this.label1.Text = "Microscope";
+            // 
             // MicroscopeMainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
@@ -541,5 +550,6 @@
         private System.Windows.Forms.ToolStripMenuItem AddEventContext;
         private System.Windows.Forms.ToolStripMenuItem AddSceneContext;
         private System.Windows.Forms.ToolStripMenuItem EditContext;
+        private System.Windows.Forms.Label label1;
     }
 }

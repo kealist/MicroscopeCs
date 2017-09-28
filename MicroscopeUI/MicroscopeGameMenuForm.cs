@@ -15,7 +15,7 @@ namespace MicroscopeUI
 {
     public partial class MicroscopeGameMenuForm : Form
     {
-        public GameModel SelectedGame { get; set; }
+        public ElementModel SelectedGame { get; set; }
         public MicroscopeGameMenuForm()
         {
             InitializeComponent();
@@ -58,7 +58,7 @@ namespace MicroscopeUI
                     switch (UserChoice)
                     {
                         case DialogResult.Yes:
-                            var gameModel = GlobalConfig.Connection.GetGame(GameListBox.SelectedIndex);
+                            ElementModel gameModel = GlobalConfig.Connection.GetGame(GameListBox.SelectedIndex);
                             GlobalConfig.CurrentGame = gameModel;
                             Program.MainForm.PopulateTreeView(gameModel);
                             break;
@@ -90,7 +90,7 @@ namespace MicroscopeUI
             SelectedGame = GlobalConfig.Connection.GetGame(GameListBox.SelectedIndex);
             CurrrentDescriptionLabelData.Text = SelectedGame.Description;
             CurrrentDescriptionLabelData.Update();
-            CurrentNumPeriodsLabelData.Text = SelectedGame.Periods.Count.ToString();
+            CurrentNumPeriodsLabelData.Text = SelectedGame.Children.Count.ToString();
             CurrentNumPeriodsLabelData.Update();
             CurrentDateModifiedLabelData.Text = SelectedGame.DModified.ToString();
         }

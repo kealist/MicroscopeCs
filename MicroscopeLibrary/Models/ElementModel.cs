@@ -16,7 +16,7 @@ namespace MicroscopeLibrary.Models
         public ModelTypes Type { get; set; }
         public string Description { get; set; }
         public string Description2 { get; set; }
-        //public DateTime? DModified { get; set; }
+        public DateTime? DModified { get; set; }
 
         public void AddChild(ElementModel childElement)
         {

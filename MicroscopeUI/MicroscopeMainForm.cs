@@ -23,43 +23,53 @@ namespace MicroscopeUI
         public void PopulateTreeView(ElementModel game)
         {
             GameTreeView.Nodes.Clear();
-            var gameNode = new TreeNode(game.Description);
-            gameNode.Tag = new TagModel
+            var gameNode = new TreeNode(game.Description)
             {
-                Type = ModelTypes.Game,
-                Id = game.Id
+                Tag = new TagModel
+                {
+                    Type = ModelTypes.Game,
+                    Id = game.Id
+                }
             };
             foreach (var period in game.Children)
             {
-                var periodNode = new TreeNode(period.Description);
-                periodNode.Tag = new TagModel
+                var periodNode = new TreeNode(period.Description)
                 {
-                    Type = ModelTypes.Period,
-                    Id = period.Id
+                    Tag = new TagModel
+                    {
+                        Type = ModelTypes.Period,
+                        Id = period.Id
+                    }
                 };
                 foreach (var evnt in period.Children)
                 {
-                    var eventNode = new TreeNode(evnt.Description);
-                    eventNode.Tag = new TagModel
+                    var eventNode = new TreeNode(evnt.Description)
                     {
-                        Type = ModelTypes.Event,
-                        Id = evnt.Id
+                        Tag = new TagModel
+                        {
+                            Type = ModelTypes.Event,
+                            Id = evnt.Id
+                        }
                     };
                     foreach (var scene in evnt.Children)
                     {
-                        var sceneNode = new TreeNode(scene.Description);
-                        sceneNode.Tag = new TagModel
+                        var sceneNode = new TreeNode(scene.Description)
                         {
-                            Type = ModelTypes.Scene,
-                            Id = scene.Id
+                            Tag = new TagModel
+                            {
+                                Type = ModelTypes.Scene,
+                                Id = scene.Id
+                            }
                         };
                         foreach (var character in scene.Children)
                         {
-                            var characterNode = new TreeNode(character.Description);
-                            characterNode.Tag = new TagModel
+                            var characterNode = new TreeNode(character.Description)
                             {
-                                Type = ModelTypes.Character,
-                                Id = character.Id
+                                Tag = new TagModel
+                                {
+                                    Type = ModelTypes.Character,
+                                    Id = character.Id
+                                }
                             };
                         }
                     }

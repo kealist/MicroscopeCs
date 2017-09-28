@@ -32,14 +32,16 @@ namespace MicroscopeLibrary.DataAccess
             foreach (var line in lines)
             {
                 string[] columns = line.Split(',');
-                var game = new GameModel();
-                game.Id = int.Parse(columns[0]);
-                game.Description = columns[1];
+                var game = new ElementModel
+                {
+                    Id = int.Parse(columns[0]),
+                    Description = columns[1]
+                };
                 string[] periodsToParse = columns[2].Split('|');
-                game.Periods = new List<PeriodModel>();
+                game.Children = new List<ElementModel>();
                 foreach (var period in periodsToParse)
                 {
-                    game.Periods.Add(GlobalConfig.Connection.GetPeriod(int.Parse(period)));
+                    game.Children.Add(GlobalConfig.Connection.GetPeriod(int.Parse(period)));
                 }
             }
             return games;

@@ -12,12 +12,27 @@ namespace MicroscopeLibrary.DataAccess
             throw new NotImplementedException();
         }
 
+        public ElementModel CreateEvent(ElementModel model)
+        {
+            throw new NotImplementedException();
+        }
+
         public GameModel CreateGame(GameModel model)
         {
             throw new NotImplementedException();
         }
 
+        public ElementModel CreateGame(ElementModel model)
+        {
+            throw new NotImplementedException();
+        }
+
         public PeriodModel CreatePeriod(PeriodModel model)
+        {
+            throw new NotImplementedException();
+        }
+
+        public ElementModel CreatePeriod(ElementModel model)
         {
             throw new NotImplementedException();
         }
@@ -34,7 +49,17 @@ namespace MicroscopeLibrary.DataAccess
             throw new NotImplementedException();
         }
 
+        public ElementModel CreateScene(ElementModel model)
+        {
+            throw new NotImplementedException();
+        }
+
         public EventModel GetEvent(EventModel model)
+        {
+            throw new NotImplementedException();
+        }
+
+        public ElementModel GetEvent(ElementModel model)
         {
             throw new NotImplementedException();
         }
@@ -59,7 +84,27 @@ namespace MicroscopeLibrary.DataAccess
             throw new NotImplementedException();
         }
 
+        public ElementModel GetScene(ElementModel model)
+        {
+            throw new NotImplementedException();
+        }
+
         public PeriodModel UpdatePeriod(PeriodModel model)
+        {
+            throw new NotImplementedException();
+        }
+
+        public ElementModel UpdatePeriod(ElementModel model)
+        {
+            throw new NotImplementedException();
+        }
+
+        ElementModel IDataConnection.GetGame(int id)
+        {
+            throw new NotImplementedException();
+        }
+
+        ElementModel IDataConnection.GetPeriod(int id)
         {
             throw new NotImplementedException();
         }
