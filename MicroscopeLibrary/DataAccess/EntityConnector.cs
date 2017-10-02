@@ -15,12 +15,6 @@ namespace MicroscopeLibrary.DataAccess
         public DbSet<GameModel> Games { get; set; }
         public DbSet<PlayerModel> Players { get; set; }
         public DbSet<PaletteModel> Palettes { get; set; }
-
-        public DbSet<PeriodModel> Periods { get; set; }
-        public DbSet<EventModel> Events { get; set; }
-        public DbSet<SceneModel> Scenes { get; set; }
-        public DbSet<CharacterModel> Characters { get; set; }
-
         public DbSet<LogModel> Logs { get; set; }
     }
 
@@ -69,39 +63,18 @@ namespace MicroscopeLibrary.DataAccess
             }
         }
 
-        public List<GameModel> GetGameList()
+        public List<ElementModel> GetGameList()
         {
             using (MicroscopeDbContext connection = new MicroscopeDbContext())
             {
                 connection.Games.Load();
-                return connection.Games.ToList();
+                return connection.Elements.Where(e => e.Type == ModelTypes.Game).ToList();
             }
         }
-
-        public PeriodModel GetPeriod(int id)
-        {
-            throw new NotImplementedException();
-        }
-
-        public SceneModel GetScene(SceneModel model)
-        {
-            throw new NotImplementedException();
-        }
+        
 
         public ElementModel GetScene(ElementModel model)
         {
-            throw new NotImplementedException();
-        }
-
-        public PeriodModel UpdatePeriod(PeriodModel model)
-        {
-            /*
-             * db.Users.Attach(updatedUser);
-               var entry = db.Entry(updatedUser);
-               entry.Property(e => e.Email).IsModified = true;
-               // other changed properties
-               db.SaveChanges();
-             */
             throw new NotImplementedException();
         }
 
@@ -112,6 +85,12 @@ namespace MicroscopeLibrary.DataAccess
 
         ElementModel IDataConnection.GetGame(int id)
         {
+            throw new NotImplementedException();
+        }
+
+        List<GameModel> IDataConnection.GetGameList()
+        {
+
             throw new NotImplementedException();
         }
 

@@ -14,12 +14,7 @@ namespace MicroscopeLibrary.DataAccess
         private const string EventsFile = "EventModels.csv";
         private const string ScenesFile = "SceneModels.csv";
         private const string CharactersFile = "CharacterModels.csv";
-
-        public EventModel CreateEvent(EventModel model)
-        {
-            throw new NotImplementedException();
-        }
-
+        
         public ElementModel CreateEvent(ElementModel model)
         {
             throw new NotImplementedException();
@@ -40,12 +35,7 @@ namespace MicroscopeLibrary.DataAccess
         {
             throw new NotImplementedException();
         }
-
-        public PeriodModel CreatePeriod(PeriodModel model)
-        {
-            throw new NotImplementedException();
-        }
-
+        
         public ElementModel CreatePeriod(ElementModel model)
         {
             throw new NotImplementedException();
@@ -55,18 +45,9 @@ namespace MicroscopeLibrary.DataAccess
         {
             throw new NotImplementedException();
         }
-
-        public SceneModel CreateScene(SceneModel model)
-        {
-            throw new NotImplementedException();
-        }
+        
 
         public ElementModel CreateScene(ElementModel model)
-        {
-            throw new NotImplementedException();
-        }
-
-        public EventModel GetEvent(EventModel model)
         {
             throw new NotImplementedException();
         }
@@ -85,27 +66,13 @@ namespace MicroscopeLibrary.DataAccess
         {
             throw new NotImplementedException();
         }
-
-        public PeriodModel GetPeriod(int id)
-        {
-            throw new NotImplementedException();
-        }
-
-        public SceneModel GetScene(SceneModel model)
-        {
-            throw new NotImplementedException();
-        }
+        
 
         public ElementModel GetScene(ElementModel model)
         {
             throw new NotImplementedException();
         }
-
-        public PeriodModel UpdatePeriod(PeriodModel model)
-        {
-            throw new NotImplementedException();
-        }
-
+        
         public ElementModel UpdatePeriod(ElementModel model)
         {
             throw new NotImplementedException();

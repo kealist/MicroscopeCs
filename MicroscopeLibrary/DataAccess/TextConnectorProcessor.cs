@@ -26,9 +26,9 @@ namespace MicroscopeLibrary.DataAccess
             return File.ReadAllLines(file).ToList();
         }
         
-        public static List<GameModel> ConvertToGameModels(this List<string> lines)
+        public static List<ElementModel> ConvertToGameModels(this List<string> lines)
         {
-            var games = new List<GameModel>();
+            var games = new List<ElementModel>();
             foreach (var line in lines)
             {
                 string[] columns = line.Split(',');
