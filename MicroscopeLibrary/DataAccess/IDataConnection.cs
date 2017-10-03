@@ -9,15 +9,15 @@ namespace MicroscopeLibrary.DataAccess
     public interface IDataConnection
     {
         PlayerModel CreatePlayer(PlayerModel model);
-        ElementModel CreateGame(ElementModel model);
-        ElementModel GetGame(int id);
-        ElementModel GetPeriod(int id);
-        ElementModel CreatePeriod(ElementModel model);
-        ElementModel UpdatePeriod(ElementModel model);
-        ElementModel GetEvent(ElementModel model);
-        ElementModel CreateEvent(ElementModel model);
-        ElementModel GetScene(ElementModel model);
-        ElementModel CreateScene(ElementModel model);
+        GameModel CreateGame(GameModel model);
+        GameModel GetGame(int id);
+        GameElementModel GetPeriod(int id);
+        GameElementModel CreatePeriod(GameElementModel model);
+        GameElementModel UpdatePeriod(GameElementModel model);
+        GameElementModel GetEvent(GameElementModel model);
+        GameElementModel CreateEvent(GameElementModel model);
+        GameElementModel GetScene(GameElementModel model);
+        GameElementModel CreateScene(GameElementModel model);
 
         List<GameModel> GetGameList();
     }

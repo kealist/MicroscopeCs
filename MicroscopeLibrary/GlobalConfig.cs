@@ -9,7 +9,7 @@ namespace MicroscopeLibrary
 {
     public static class GlobalConfig
     {
-        public static ElementModel CurrentGame { get; set; }
+        public static GameModel CurrentGame { get; set; }
         public static bool UnsavedChanges { get; set; } = true;
         public enum ConnectionType { EntityFramework, Json } ;
         /// <summary>

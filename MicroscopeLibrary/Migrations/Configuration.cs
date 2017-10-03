@@ -9,11 +9,14 @@ namespace MicroscopeLibrary.Migrations
     {
         public Configuration()
         {
-            AutomaticMigrationsEnabled = false;
+            AutomaticMigrationsEnabled = true;
         }
 
         protected override void Seed(MicroscopeLibrary.DataAccess.MicroscopeDbContext context)
         {
+            context.Games.AddOrUpdate(
+                new Models.GameModel {Id = 1, Description="An Empire Falls"}
+                );
             //  This method will be called after migrating to the latest version.
 
             //  You can use the DbSet<T>.AddOrUpdate() helper extension method 

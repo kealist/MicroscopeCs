@@ -8,7 +8,7 @@ namespace MicroscopeLibrary.DataAccess
     public class JsonConnector : IDataConnection
     {
 
-        public ElementModel CreateEvent(ElementModel model)
+        public GameElementModel CreateEvent(GameElementModel model)
         {
             throw new NotImplementedException();
         }
@@ -18,12 +18,12 @@ namespace MicroscopeLibrary.DataAccess
             throw new NotImplementedException();
         }
 
-        public ElementModel CreateGame(ElementModel model)
+        public GameElementModel CreateGame(GameElementModel model)
         {
             throw new NotImplementedException();
         }
 
-        public ElementModel CreatePeriod(ElementModel model)
+        public GameElementModel CreatePeriod(GameElementModel model)
         {
             throw new NotImplementedException();
         }
@@ -36,12 +36,12 @@ namespace MicroscopeLibrary.DataAccess
         }
         
 
-        public ElementModel CreateScene(ElementModel model)
+        public GameElementModel CreateScene(GameElementModel model)
         {
             throw new NotImplementedException();
         }
 
-        public ElementModel GetEvent(ElementModel model)
+        public GameElementModel GetEvent(GameElementModel model)
         {
             throw new NotImplementedException();
         }
@@ -56,22 +56,22 @@ namespace MicroscopeLibrary.DataAccess
             throw new NotImplementedException();
         }
 
-        public ElementModel GetScene(ElementModel model)
+        public GameElementModel GetScene(GameElementModel model)
         {
             throw new NotImplementedException();
         }
         
-        public ElementModel UpdatePeriod(ElementModel model)
+        public GameElementModel UpdatePeriod(GameElementModel model)
         {
             throw new NotImplementedException();
         }
 
-        ElementModel IDataConnection.GetGame(int id)
+        GameModel IDataConnection.GetGame(int id)
         {
             throw new NotImplementedException();
         }
 
-        ElementModel IDataConnection.GetPeriod(int id)
+        GameElementModel IDataConnection.GetPeriod(int id)
         {
             throw new NotImplementedException();
         }

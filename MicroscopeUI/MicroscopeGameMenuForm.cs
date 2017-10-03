@@ -15,7 +15,7 @@ namespace MicroscopeUI
 {
     public partial class MicroscopeGameMenuForm : Form
     {
-        public ElementModel SelectedGame { get; set; }
+        public GameModel SelectedGame { get; set; }
         public MicroscopeGameMenuForm()
         {
             InitializeComponent();
@@ -33,7 +33,7 @@ namespace MicroscopeUI
             {
                 if (ValidateForm())
                 {
-                    ElementModel game = new ElementModel(ModelTypes.Game,null,BigPictureTextbox.Text);
+                    GameModel game = new GameModel(BigPictureTextbox.Text);
                     GlobalConfig.Connection.CreateGame(game);
                     GameListBox.DataSource = GlobalConfig.Connection.GetGameList().Select(g => g.Description).ToList();
                     GameListBox.Update();
@@ -58,7 +58,7 @@ namespace MicroscopeUI
                     switch (UserChoice)
                     {
                         case DialogResult.Yes:
-                            ElementModel gameModel = GlobalConfig.Connection.GetGame(GameListBox.SelectedIndex);
+                            GameModel gameModel = GlobalConfig.Connection.GetGame(GameListBox.SelectedIndex + 1);
                             GlobalConfig.CurrentGame = gameModel;
                             Program.MainForm.PopulateTreeView(gameModel);
                             break;
@@ -70,7 +70,7 @@ namespace MicroscopeUI
                 {
 
                 }
-                GlobalConfig.CurrentGame = GlobalConfig.Connection.GetGame(GameListBox.SelectedIndex);
+                GlobalConfig.CurrentGame = GlobalConfig.Connection.GetGame(GameListBox.SelectedIndex+1);
             }
 
         }
@@ -87,10 +87,10 @@ namespace MicroscopeUI
 
         private void GameListBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            SelectedGame = GlobalConfig.Connection.GetGame(GameListBox.SelectedIndex);
+            SelectedGame = GlobalConfig.Connection.GetGame(GameListBox.SelectedIndex + 1);
             CurrrentDescriptionLabelData.Text = SelectedGame.Description;
             CurrrentDescriptionLabelData.Update();
-            CurrentNumPeriodsLabelData.Text = SelectedGame.Children.Count.ToString();
+            CurrentNumPeriodsLabelData.Text = SelectedGame.Elements.Count.ToString();
             CurrentNumPeriodsLabelData.Update();
             CurrentDateModifiedLabelData.Text = SelectedGame.DModified.ToString();
         }

@@ -11,7 +11,7 @@ namespace MicroscopeLibrary.DataAccess
     public class MicroscopeDbContext : DbContext
     {
         public MicroscopeDbContext() :base(GlobalConfig.CnnString("SQLExpress")){}
-        public DbSet<ElementModel> Elements { get; set; }
+        public DbSet<GameElementModel> Elements { get; set; }
         public DbSet<GameModel> Games { get; set; }
         public DbSet<PlayerModel> Players { get; set; }
         public DbSet<PaletteModel> Palettes { get; set; }
@@ -20,22 +20,22 @@ namespace MicroscopeLibrary.DataAccess
 
     class EntityConnector : IDataConnection
     {
-        public ElementModel CreateEvent(ElementModel model)
+        public GameElementModel CreateEvent(GameElementModel model)
         {
             throw new NotImplementedException();
         }
 
-        public ElementModel CreateGame(ElementModel model)
+        public GameModel CreateGame(GameModel model)
         {
             using (MicroscopeDbContext connection = new MicroscopeDbContext())
             {
-                connection.Elements.Add(model);
+                connection.Games.Add(model);
                 connection.SaveChanges();
             }
             return model;
         }
 
-        public ElementModel CreatePeriod(ElementModel period)
+        public GameElementModel CreatePeriod(GameElementModel period)
         {
             throw new NotImplementedException();
         }
@@ -45,12 +45,12 @@ namespace MicroscopeLibrary.DataAccess
             throw new NotImplementedException();
         }
 
-        public ElementModel CreateScene(ElementModel model)
+        public GameElementModel CreateScene(GameElementModel model)
         {
             throw new NotImplementedException();
         }
 
-        public ElementModel GetEvent(ElementModel model)
+        public GameElementModel GetEvent(GameElementModel model)
         {
             throw new NotImplementedException();
         }
@@ -63,7 +63,7 @@ namespace MicroscopeLibrary.DataAccess
             }
         }
 
-        public List<ElementModel> GetGameList()
+        public List<GameElementModel> GetGameList()
         {
             using (MicroscopeDbContext connection = new MicroscopeDbContext())
             {
@@ -73,28 +73,33 @@ namespace MicroscopeLibrary.DataAccess
         }
         
 
-        public ElementModel GetScene(ElementModel model)
+        public GameElementModel GetScene(GameElementModel model)
         {
             throw new NotImplementedException();
         }
 
-        public ElementModel UpdatePeriod(ElementModel model)
+        public GameElementModel UpdatePeriod(GameElementModel model)
         {
             throw new NotImplementedException();
         }
 
-        ElementModel IDataConnection.GetGame(int id)
+        GameModel IDataConnection.GetGame(int id)
         {
-            throw new NotImplementedException();
+            using (MicroscopeDbContext connection = new MicroscopeDbContext())
+            {
+                return connection.Games.Where(g => g.Id == id).FirstOrDefault<GameModel>();
+            }
         }
 
         List<GameModel> IDataConnection.GetGameList()
         {
-
-            throw new NotImplementedException();
+            using (MicroscopeDbContext connection = new MicroscopeDbContext())
+            {
+                return connection.Games.ToList();
+            }
         }
 
-        ElementModel IDataConnection.GetPeriod(int id)
+        GameElementModel IDataConnection.GetPeriod(int id)
         {
             throw new NotImplementedException();
         }

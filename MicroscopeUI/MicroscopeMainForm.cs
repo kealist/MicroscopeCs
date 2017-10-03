@@ -20,7 +20,7 @@ namespace MicroscopeUI
             InitializeComponent();
         }
 
-        public void PopulateTreeView(ElementModel game)
+        public void PopulateTreeView(GameModel game)
         {
             GameTreeView.Nodes.Clear();
             var gameNode = new TreeNode(game.Description)
@@ -31,7 +31,7 @@ namespace MicroscopeUI
                     Id = game.Id
                 }
             };
-            foreach (var period in game.Children)
+            foreach (var period in game.Elements.Where(e => e.Type == ModelTypes.Period))
             {
                 var periodNode = new TreeNode(period.Description)
                 {
